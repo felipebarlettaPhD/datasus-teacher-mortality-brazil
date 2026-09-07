@@ -1,0 +1,1037 @@
+icd10_3,Deaths,Percentage,cause_description
+I21,11158,5.708088419609468,Infarto agudo do miocárdio
+B34,11009,5.631864618343846,"Doenças por vírus, de localização não especificada"
+C50,9413,4.815400277270472,Neoplasia maligna da mama
+J18,7756,3.9677302189004333,Pneumonia por microorganismo não especificada
+E14,5976,3.0571371568010557,Diabetes mellitus não especificado
+C34,5310,2.716432112217806,Neoplasia maligna dos brônquios e dos pulmões
+G30,5157,2.6381620344081402,Doença de Alzheimer
+R99,3900,1.995119630442456,Outras causas mal definidas e as não especificadas de mortalidade
+C18,3754,1.9204305365848668,Neoplasia maligna do cólon
+J44,3638,1.861088516807604,Outras doenças pulmonares obstrutivas crônicas
+I64,3521,1.8012349278943303,"Acidente vascular cerebral, não especificado como hemorrágico ou isquêmico"
+N39,3372,1.7250111266287083,Outros transtornos do trato urinário
+C25,3369,1.7234764192206755,Neoplasia maligna do pâncreas
+I50,2959,1.5137330734562122,Insuficiência cardíaca
+I10,2858,1.4620645907191128,Hipertensão essencial (primária)
+I25,2718,1.3904449116775888,Doença isquêmica crônica do coração
+A41,2554,1.3065475733718033,Outras septicemias
+I61,2547,1.302966589419727,Hemorragia intracerebral
+C16,2220,1.1356834819441672,Neoplasia maligna do estômago
+C56,2162,1.106012472055536,Neoplasia maligna do ovário
+C71,2121,1.0850381374790896,Neoplasia maligna do encéfalo
+I67,1959,1.002163937445326,Outras doenças cerebrovasculares
+I69,1959,1.002163937445326,Seqüelas de doenças cerebrovasculares
+I11,1883,0.9632846831084987,Doença cardíaca hipertensiva
+C22,1859,0.9510070238442374,Neoplasia maligna do fígado e das vias biliares intra-hepáticas
+J15,1858,0.9504954547082265,Pneumonia bacteriana não classificada em outra parte
+I26,1547,0.7913974534088409,Embolia pulmonar
+C53,1503,0.7688884114243619,Neoplasia maligna do colo do útero
+I42,1351,0.6911299027507073,Cardiomiopatias
+J98,1325,0.6778291052144242,Outros transtornos respiratórios
+B20,1300,0.665039876814152,"Doença pelo vírus da imunodeficiência humana [HIV], resultando em doenças infecciosas e parasitárias"
+I60,1297,0.6635051694061194,Hemorragia subaracnóide
+E11,1245,0.6369035743335533,Diabetes mellitus não-insulino-dependente
+I71,1236,0.6322994521094554,Aneurisma e dissecção da aorta
+I63,1235,0.6317878829734445,Infarto cerebral
+C20,1221,0.624625915069292,Neoplasia maligna do reto
+G20,1188,0.6077441335809328,Doença de Parkinson
+C80,1185,0.6062094261729002,"Neoplasia maligna, sem especificação de localização"
+K74,1041,0.5325434705873325,Fibrose e cirrose hepáticas
+C92,1034,0.5289624866352564,Leucemia mielóide
+C85,1017,0.5202658113230713,Linfoma não-Hodgkin de outros tipos e de tipo não especificado
+C90,995,0.5090112903308318,Mieloma múltiplo e neoplasias malignas de plasmócitos
+X70,988,0.5054303063787555,"Lesão autoprovocada intencionalmente por enforcamento, estrangulamento e sufocação"
+W18,953,0.4875253866183745,Outras quedas no mesmo nível
+J69,945,0.48343283353028743,Pneumonite devida a sólidos e líquidos
+F03,934,0.4778055730341677,Demência não especificada
+C54,931,0.476270865626135,Neoplasia maligna do corpo do útero
+K56,902,0.46143536068181934,Íleo paralítico e obstrução intestinal sem hérnia
+N18,879,0.449669270553569,Insuficiência renal crônica
+J84,874,0.4471114248735145,Outras doenças pulmonares intersticiais
+E66,830,0.4246023828890355,Obesidade
+K92,823,0.42102139893695933,Outras doenças do aparelho digestivo
+C61,817,0.417951984120894,Neoplasia maligna da próstata
+C26,804,0.4113015853527525,Neoplasia maligna de outros órgãos digestivos e de localizações mal definidas no aparelho digestivo
+R98,768,0.3928850964563606,Morte sem assistência
+C64,735,0.3760033149680013,"Neoplasia maligna do rim, exceto pelve renal"
+I48,734,0.37549174583199046,Flutter e fibrilação atrial
+G31,718,0.3673066396558163,Outras doenças degenerativas do sistema nervoso não classificadas em outra parte
+Y34,703,0.359633102615653,Fatos ou eventos não especificados e intenção não determinada
+I35,687,0.3514479964394788,Transtornos não-reumáticos da valva aórtica
+C24,680,0.3478670124874026,"Neoplasia maligna de outras partes, e de partes não especificadas das vias biliares"
+C67,659,0.337124060631174,Neoplasia maligna da bexiga
+X95,644,0.3294505235910107,Agressão por meio de disparo de outra arma de fogo ou de arma não especificada
+V89,639,0.3268926779109563,"Acidente com um veículo a motor ou não-motorizado, tipo(s) de veículo(s) não especificado(s)"
+C76,630,0.3222885556868583,Neoplasia maligna de outras localizações e de localizações mal definidas
+N17,612,0.31308031123866237,Insuficiência renal aguda
+I49,611,0.31256874210265145,Outras arritmias cardíacas
+C55,605,0.30949932728658613,"Neoplasia maligna do útero, porção não especificada"
+E10,595,0.30438363592647727,Diabetes mellitus insulino-dependente
+K55,594,0.3038720667904664,Transtornos vasculares do intestino
+A09,572,0.2926175457982269,Diarréia e gastroenterite de origem infecciosa presumível
+K85,558,0.2854555778940745,Pancreatite aguda
+C43,551,0.28187459394199826,Melanoma maligno da pele
+I12,545,0.278805179125933,Doença renal hipertensiva
+K57,517,0.2644812433176282,Doença diverticular do intestino
+G12,507,0.2593655519575193,Atrofia muscular espinal e síndromes correlatas
+I51,504,0.2578308445494866,Complicações de cardiopatias e doenças cardíacas mal definidas
+C15,499,0.2552729988694322,Neoplasia maligna do esôfago
+V49,481,0.24606475442123626,Ocupante de um automóvel [carro] traumatizado em outro acidentes de transporte e em acidentes de transporte não especificados
+R09,471,0.2409490630611274,Outros sintomas e sinais relativos aos aparelhos circulatório e respiratório
+I24,460,0.23532180256500765,Outras doenças isquêmicas agudas do coração
+K70,454,0.23225238774894233,Doença alcoólica do fígado
+W19,453,0.23174081861293144,Queda sem especificação
+X99,448,0.229182972932877,Agressão por meio de objeto cortante ou penetrante
+J96,445,0.22764826552484435,Insuficiência respiratória não classificada de outra parte
+C91,423,0.21639374453260485,Leucemia linfóide
+C48,420,0.2148590371245722,Neoplasia maligna dos tecidos moles do retroperitônio e do peritônio
+C19,412,0.21076648403648512,Neoplasia maligna da junção retossigmóide
+C49,410,0.20974334576446335,Neoplasia maligna do tecido conjuntivo e de outros tecidos moles
+C78,405,0.20718550008440892,Neoplasia maligna secundária dos órgãos respiratórios e digestivos
+K65,399,0.2041160852683436,Peritonite
+J45,391,0.2000235321802565,Asma
+K76,382,0.19541940995615853,Outras doenças do fígado
+R96,369,0.188769011188017,Outras mortes súbitas de causa desconhecida
+R54,362,0.1851880272359408,Senilidade
+C79,360,0.18416488896391903,Neoplasia maligna secundária de outras localizações
+I80,359,0.18365331982790814,Flebite e tromboflebite
+M32,355,0.1816070432838646,Lúpus eritematoso disseminado [sistêmico]
+K81,350,0.17904919760381016,Colecistite
+V29,347,0.1775144901957775,Motociclista traumatizado em outros acidentes de transporte e em acidentes de transporte não especificados
+J43,346,0.17700292105976662,Enfisema
+V43,341,0.17444507537971218,"Ocupante de um automóvel [carro] traumatizado em colisão com um automóvel [carro], ""pick up"" ou caminhonete"
+B18,335,0.17137566056364686,Hepatite viral crônica
+K72,327,0.16728310747555977,Insuficiência hepática não classificada em outra parte
+K80,325,0.166259969203538,Colelitíase
+G93,323,0.16523683093151623,Outros transtornos do encéfalo
+V44,320,0.1637021235234836,Ocupante de um automóvel [carro] traumatizado em colisão com um veículo de transporte pesado ou um ônibus
+L08,319,0.1631905543874727,Outras infecções localizadas da pele e do tecido subcutâneo
+Y83,307,0.15705172475534207,"Reação anormal em paciente ou complicação tardia, causadas por intervenção cirúrgica e por outros atos cirúrgicos, sem menção de acidente durante a intervenção"
+I05,306,0.15654015561933118,Doenças reumáticas da valva mitral
+I34,297,0.1519360333952332,Transtornos não-reumáticos da valva mitral
+E78,285,0.14579720376310257,Distúrbios do metabolismo de lipoproteínas e outras lipidemias
+W01,281,0.14375092721905902,"Queda no mesmo nível por escorregão, tropeção ou passos em falsos [traspés]"
+C23,276,0.1411930815390046,Neoplasia maligna da vesícula biliar
+V23,276,0.1411930815390046,"Motociclista traumatizado em colisão com um automóvel [carro], ""pick up"" ou caminhonete"
+A46,273,0.13965837413097193,Erisipela
+C72,270,0.13812366672293927,"Neoplasia maligna da medula espinhal, dos nervos cranianos e de outras partes do sistema nervoso central"
+C95,269,0.13761209758692838,Leucemia de tipo celular não especificado
+C41,267,0.1365889593149066,Neoplasia maligna dos ossos e das cartilagens articulares de outras localizações e de localizações não especificadas
+D46,264,0.13505425190687395,Síndromes mielodisplásicas
+I13,264,0.13505425190687395,Doença cardíaca e renal hipertensiva
+C17,263,0.13454268277086306,Neoplasia maligna do intestino delgado
+E87,259,0.13249640622681952,Outros transtornos do equilíbrio hidroeletrolítico e ácido-básico
+J81,258,0.13198483709080863,"Edema pulmonar, não especificado de outra forma"
+B57,255,0.13045012968277597,Doença de Chagas
+C44,255,0.13045012968277597,Outras neoplasias malignas da pele
+W84,251,0.12840385313873243,Riscos não especificados à respiração
+B24,250,0.12789228400272154,Doença pelo vírus da imunodeficiência humana [HIV] não especificada
+I33,249,0.12738071486671065,Endocardite aguda e subaguda
+N19,248,0.12686914573069977,Insuficiência renal não especificada
+I27,244,0.12482286918665624,Outras formas de doença cardíaca pulmonar
+I73,243,0.12431130005064535,Outras doenças vasculares periféricas
+C83,241,0.12328816177862358,Linfoma não-Hodgkin difuso
+K83,240,0.12277659264261269,Outras doenças das vias biliares
+N03,237,0.12124188523458003,Síndrome nefrítica crônica
+G40,236,0.12073031609856914,Epilepsia
+I46,235,0.12021874696255826,Parada cardíaca
+E46,231,0.11817247041851471,Desnutrição protéico-calórica não especificada
+K63,231,0.11817247041851471,Outras doenças do intestino
+I62,230,0.11766090128250382,Outras hemorragias intracranianas não-traumáticas
+V09,227,0.11612619387447116,Pedestre traumatizado em outros acidentes de transporte e em acidentes de transporte não especificados
+C32,225,0.11510305560244939,Neoplasia maligna da laringe
+W78,224,0.1145914864664385,Inalação do conteúdo gástrico
+K25,221,0.11305677905840585,Úlcera gástrica
+N12,217,0.1110105025143623,Nefrite túbulo-intersticial não especificada se aguda ou crônica
+L89,215,0.10998736424234053,Úlcera de decúbito
+I74,213,0.10896422597031875,Embolia e trombose arteriais
+C73,208,0.10640638029026432,Neoplasia maligna da glândula tireóide
+V48,201,0.10282539633818813,Ocupante de um automóvel [carro] traumatizado em um acidente de transporte sem colisão
+X59,200,0.10231382720217724,Exposição a fatores não especificados
+M06,197,0.10077911979414458,Outras artrites reumatóides
+A16,194,0.09924441238611192,"Tuberculose das vias respiratórias, sem confirmação bacteriológica ou histológica"
+I38,186,0.09515185929802483,Endocardite de valva não especificada
+R57,185,0.09464029016201395,Choque não classificado em outra parte
+B22,181,0.0925940136179704,Doença pelo vírus da imunodeficiência humana [HIV] resultando em outras doenças especificadas
+A90,173,0.08850146052988331,Dengue [dengue clássico]
+V24,173,0.08850146052988331,Motociclista traumatizado em colisão com um veículo de transporte pesado ou um ônibus
+X80,170,0.08696675312185065,Lesão autoprovocada intencionalmente por precipitação de um lugar elevado
+F10,160,0.0818510617617418,Transtornos mentais e comportamentais devidos ao uso de álcool
+L03,160,0.0818510617617418,Celulite (Flegmão)
+D61,159,0.08133949262573091,Outras anemias aplásticas
+C21,158,0.08082792348972002,Neoplasia maligna do ânus e do canal anal
+M62,157,0.08031635435370914,Outros transtornos musculares
+C81,156,0.07980478521769825,Doença de Hodgkin
+D64,155,0.07929321608168736,Outras anemias
+E03,155,0.07929321608168736,Outros hipotireoidismos
+J90,155,0.07929321608168736,Derrame pleural não classificado em outra parte
+R68,155,0.07929321608168736,Outros sintomas e sinais gerais
+K75,151,0.07724693953764382,Outras doenças inflamatórias do fígado
+W69,150,0.07673537040163293,Afogamento e submersão em águas naturais
+C38,147,0.07520066299360027,"Neoplasia maligna do coração, mediastino e pleura"
+K26,146,0.07468909385758939,Úlcera duodenal
+C02,145,0.0741775247215785,Neoplasia maligna de outras partes e de partes não especificadas da língua
+F17,145,0.0741775247215785,Transtornos mentais e comportamentais devidos ao uso de fumo
+Y29,142,0.07264281731354584,"Contato com objeto contundente, intenção não determinada"
+V28,141,0.07213124817753495,Motociclista traumatizado em um acidente de transporte sem colisão
+N20,138,0.0705965407695023,Calculose do rim e do ureter
+K46,136,0.06957340249748052,Hérnia abdominal não especificada
+V03,136,0.06957340249748052,"Pedestre traumatizado em colisão com um automóvel [carro], ""pick up"" ou caminhonete"
+J12,135,0.06906183336146964,Pneumonia viral não classificada em outra parte
+A04,129,0.06599241854540432,Outras infecções intestinais bacterianas
+A48,129,0.06599241854540432,Outras doenças bacterianas não classificadas em outra parte
+D68,129,0.06599241854540432,Outros defeitos da coagulação
+V47,127,0.06496928027338254,Ocupante de um automóvel [carro] traumatizado em colisão com um objeto fixo ou parado
+I70,124,0.06343457286534988,Aterosclerose
+C10,123,0.062923003729339,Neoplasia maligna da orofaringe
+I44,123,0.062923003729339,Bloqueio atrioventricular e do ramo esquerdo
+M86,123,0.062923003729339,Osteomielite
+C51,120,0.061388296321306345,Neoplasia maligna da vulva
+J47,120,0.061388296321306345,Bronquectasia
+Y00,120,0.061388296321306345,Agressão por meio de um objeto contundente
+K35,118,0.06036515804928457,Apendicite aguda
+I08,113,0.05780731236923014,Doenças de múltiplas valvas
+C06,112,0.05729574323321925,Neoplasia maligna de outras partes e de partes não especificadas da boca
+I31,112,0.05729574323321925,Outras doenças do pericárdio
+F32,111,0.056784174097208366,Episódios depressivos
+G35,111,0.056784174097208366,Esclerose múltipla
+E43,110,0.05627260496119748,Desnutrição protéico-calórica grave não especificada
+B94,109,0.05576103582518659,Seqüelas de outras doenças infecciosas e parasitárias e das não especificadas
+D69,107,0.05473789755316482,Púrpura e outras afecções hemorrágicas
+E86,107,0.05473789755316482,Depleção de volume
+I77,107,0.05473789755316482,Outras afecções das artérias e arteríolas
+X91,107,0.05473789755316482,"Agressão por meio de enforcamento, estrangulamento e sufocação"
+G00,105,0.05371475928114305,Meningite bacteriana não classificada em outra parte
+W79,104,0.05320319014513216,Inalação e ingestão de alimentos causando obstrução do trato respiratório
+D47,102,0.052180051873110395,"Outras neoplasias de comportamento incerto ou desconhecido dos tecidos linfático, hematopoético e tecidos correlatos"
+G04,102,0.052180051873110395,"Encefalite, mielite e encefalomielite"
+V99,101,0.05166848273709951,Acidente de transporte não especificado
+F01,100,0.05115691360108862,Demência vascular
+I72,100,0.05115691360108862,Outros aneurismas
+O99,100,0.05115691360108862,"Outras doenças da mãe, classificadas em outra parte, mas que complicam a gravidez o parto e o puerpério"
+D32,97,0.04962220619305596,Neoplasia benigna das meninges
+G91,97,0.04962220619305596,Hidrocefalia
+K27,97,0.04962220619305596,Úlcera péptica de localização não especificada
+J22,96,0.049110637057045076,Infecções agudas não especificada das vias aéreas inferiores
+A91,95,0.04859906792103419,Febre hemorrágica devida ao vírus do dengue
+J11,93,0.047575929649012416,Influenza [gripe] devida a vírus não identificado
+N28,92,0.04706436051300153,Outros transtornos do rim e do ureter não classificado em outra parte
+B21,88,0.045018083968957984,"Doença pelo vírus da imunodeficiência humana [HIV], resultando em neoplasias malignas"
+V87,87,0.0445065148329471,"Acidente de trânsito de tipo especificado, mas sendo desconhecido o modo de transporte da vítima"
+X93,86,0.04399494569693621,Agressão por meio de disparo de arma de fogo de mão
+W74,85,0.043483376560925324,Afogamento e submersão não especificados
+C75,84,0.04297180742491444,Neoplasia maligna de outras glândulas endócrinas e de estruturas relacionadas
+D48,83,0.04246023828890355,Neoplasia de comportamento incerto ou desconhecido de outras localizações e de localizações não especificadas
+Y20,83,0.04246023828890355,"Enforcamento, estrangulamento e sufocação, intenção não determinada"
+F20,82,0.041948669152892665,Esquizofrenia
+M34,82,0.041948669152892665,Esclerose sistêmica
+C84,81,0.04143710001688178,Linfomas de células T cutâneas e periféricas
+V02,81,0.04143710001688178,Pedestre traumatizado em colisão com um veículo a motor de duas ou três rodas
+V22,81,0.04143710001688178,Motociclista traumatizado em colisão com um veículo a motor de duas ou três rodas
+X64,81,0.04143710001688178,"Auto-intoxicação por e exposição, intencional, a outras drogas, medicamentos e substâncias biológicas e às não especificadas"
+I20,80,0.0409255308808709,Angina pectoris
+V27,80,0.0409255308808709,Motociclista traumatizado em colisão com um objeto fixo ou parado
+D57,78,0.039902392608849126,Transtornos falciformes
+I82,77,0.03939082347283824,Outra embolia e trombose venosas
+N10,77,0.03939082347283824,Nefrite túbulo-intersticial aguda
+K40,76,0.03887925433682735,Hérnia inguinal
+L02,75,0.038367685200816466,"Abscesso cutâneo, furúnculo e antraz"
+O98,75,0.038367685200816466,"Doenças infecciosas e parasitárias maternas classificáveis em outra parte mas que compliquem a gravidez, o parto e o puerpério"
+W87,73,0.03734454692879469,Exposição a corrente elétrica não especificada
+D43,72,0.03683297779278381,Neoplasia de comportamento incerto ou desconhecido do encéfalo e do sistema nervoso central
+M31,72,0.03683297779278381,Outras vasculopatias necrotizantes
+X61,71,0.03632140865677292,"Auto-intoxicação por e exposição, intencional, a drogas anticonvulsivantes [antiepilépticos] sedativos, hipnóticos, antiparkinsonianos e psicotrópicos não classificados em outra parte"
+C57,70,0.035809839520762034,Neoplasia maligna de outros órgãos genitais femininos e dos não especificados
+C82,70,0.035809839520762034,"Linfoma não-Hodgkin, folicular (nodular)"
+K31,68,0.03478670124874026,Outras doenças do estômago e do duodeno
+E88,67,0.034275132112729374,Outros distúrbios metabólicos
+I47,66,0.03376356297671849,Taquicardia paroxística
+K22,66,0.03376356297671849,Outras doenças do esôfago
+X74,66,0.03376356297671849,Lesão autoprovocada intencionalmente por disparo de outra arma de fogo e de arma de fogo não especificada
+X68,65,0.0332519938407076,"Auto-intoxicação por e exposição, intencional, a pesticidas"
+E85,64,0.032740424704696715,Amiloidose
+K52,64,0.032740424704696715,Outras gastroenterites e colites não-infecciosas
+N30,64,0.032740424704696715,Cistite
+C74,63,0.03222885556868583,Neoplasia maligna da glândula supra-renal [Glândula adrenal]
+C11,62,0.03171728643267494,Neoplasia maligna da nasofaringe
+J86,62,0.03171728643267494,Piotórax
+K82,62,0.03171728643267494,Outras doenças da vesícula biliar
+N11,62,0.03171728643267494,Nefrite túbulo-intersticial crônica
+W10,62,0.03171728643267494,Queda em ou de escadas ou degraus
+G71,61,0.03120571729666406,Transtornos primários dos músculos
+J10,61,0.03120571729666406,Influenza devida a outro vírus da influenza [gripe] identificado
+R10,61,0.03120571729666406,Dor abdominal e pélvica
+V04,61,0.03120571729666406,Pedestre traumatizado em colisão com um veículo de transporte pesado ou com um ônibus
+J09,60,0.030694148160653172,Influenza [gripe] devida a vírus identificado da gripe aviária
+K44,60,0.030694148160653172,Hérnia diafragmática
+I85,59,0.030182579024642286,Varizes esofagianas
+K29,58,0.0296710098886314,Gastrite e duodenite
+G70,57,0.029159440752620513,Miastenia gravis e outros transtornos neuromusculares
+J80,57,0.029159440752620513,Síndrome do desconforto respiratório do adulto
+C07,55,0.02813630248059874,Neoplasia maligna da glândula parótida
+K51,55,0.02813630248059874,Colite ulcerativa
+W17,55,0.02813630248059874,Outras quedas de um nível a outro
+B65,54,0.027624733344587853,Esquistossomose [bilharziose] [Schistosomíase]
+C70,54,0.027624733344587853,Neoplasia maligna das meninges
+K50,54,0.027624733344587853,Doença de Crohn [enterite regional]
+A15,53,0.027113164208576967,"Tuberculose respiratória, com confirmação bacteriológica e histológica"
+X09,53,0.027113164208576967,"Exposição a tipo não especificado de fumaça, fogo ou chamas"
+Y30,53,0.027113164208576967,"Queda, salto ou empurrado de um lugar elevado, intenção não determinada"
+D37,52,0.02660159507256608,Neoplasia de comportamento incerto ou desconhecido da cavidade oral e dos órgãos digestivos
+G41,52,0.02660159507256608,Estado de mal epiléptico
+K59,52,0.02660159507256608,Outros transtornos funcionais do intestino
+K86,52,0.02660159507256608,Outras doenças do pâncreas
+M84,52,0.02660159507256608,Transtornos da continuidade do osso
+O96,52,0.02660159507256608,"Morte, por qualquer causa obstétrica, que ocorre mais de 42 dias, mas menos de 1 ano, após o parto"
+C01,51,0.026090025936555197,Neoplasia maligna da base da língua
+C14,51,0.026090025936555197,"Neoplasia maligna de outras localizações e de localizações mal definida, do lábio, cavidade oral e faringe"
+L98,51,0.026090025936555197,Outras afecções da pele e do tecido subcutâneo não classificadas em outra parte
+M35,51,0.026090025936555197,Outras afecções sistêmicas do tecido conjuntivo
+X84,50,0.02557845680054431,Lesão autoprovocada intencionalmente por meios não especificados
+Y09,50,0.02557845680054431,Agressão por meios não especificados
+W06,49,0.025066887664533424,Queda de um leito
+Y04,49,0.025066887664533424,Agressão por meio de força corporal
+I83,48,0.024555318528522538,Varizes dos membros inferiores
+C96,47,0.02404374939251165,"Outras neoplasias malignas e as não especificadas dos tecidos linfático, hematopoético e tecidos correlatos"
+D70,47,0.02404374939251165,Agranulocitose
+K42,46,0.023532180256500765,Hérnia umbilical
+G11,45,0.02302061112048988,Ataxia hereditária
+G61,45,0.02302061112048988,Polineuropatia inflamatória
+A81,44,0.022509041984478992,Infecções por vírus atípicos do sistema nervoso central
+C40,44,0.022509041984478992,Neoplasia maligna dos ossos e cartilagens articulares dos membros
+C68,44,0.022509041984478992,Neoplasia maligna de outros órgãos urinários e dos não especificados
+D59,44,0.022509041984478992,Anemia hemolítica adquirida
+K66,44,0.022509041984478992,Outros transtornos do peritônio
+J40,43,0.021997472848468105,Bronquite não especificada como aguda ou crônica
+X69,43,0.021997472848468105,"Auto-intoxicação por e exposição, intencional, a outros produtos químicos e substâncias nocivas não especificadas"
+D38,42,0.02148590371245722,Neoplasia de comportamento incerto ou desconhecido do ouvido médio e dos órgãos respiratórios e intratorácicos
+D65,42,0.02148590371245722,Coagulação intravascular disseminada [síndrome de desfibrinação]
+J42,42,0.02148590371245722,Bronquite crônica não especificada
+K43,42,0.02148590371245722,Hérnia ventral
+N40,42,0.02148590371245722,Hiperplasia da próstata
+O15,42,0.02148590371245722,Eclâmpsia
+G62,41,0.020974334576446332,Outras polineuropatias
+J93,41,0.020974334576446332,Pneumotórax
+G03,40,0.02046276544043545,Meningite devida a outras causas e a causas não especificadas
+J46,40,0.02046276544043545,Estado de mal asmático
+D84,39,0.019951196304424563,Outras imunodeficiências
+B16,38,0.019439627168413676,Hepatite aguda B
+B17,38,0.019439627168413676,Outras hepatites virais agudas
+I09,38,0.019439627168413676,Outras doenças reumáticas do coração
+O88,38,0.019439627168413676,Embolia de origem obstétrica
+Y84,38,0.019439627168413676,"Reação anormal em paciente ou complicação tardia, causadas por outros procedimentos médicos, sem menção de acidente durante o procedimento"
+G90,37,0.01892805803240279,Transtornos do sistema nervoso autônomo
+M33,37,0.01892805803240279,Dermatopoliomiosite
+M72,37,0.01892805803240279,Transtornos fibroblásticos
+V20,37,0.01892805803240279,Motociclista traumatizado em colisão com um pedestre ou um animal
+W13,37,0.01892805803240279,Queda de ou para fora de edifícios ou outras estruturas
+A31,36,0.018416488896391903,Infecções devidas a outras micobactérias
+C45,36,0.018416488896391903,Mesotelioma
+C62,36,0.018416488896391903,Neoplasia maligna dos testículos
+E05,36,0.018416488896391903,Tireotoxicose [hipertireoidismo]
+O14,36,0.018416488896391903,Hipertensão gestacional [induzida pela gravidez] com proteinúria significativa
+O72,36,0.018416488896391903,Hemorragia pós-parto
+Q21,36,0.018416488896391903,Malformações congênitas dos septos cardíacos
+A49,35,0.017904919760381017,Infecção bacteriana de localização não especificada
+M46,35,0.017904919760381017,Outras espondilopatias inflamatórias
+M80,35,0.017904919760381017,Osteoporose com fratura patológica
+B02,34,0.01739335062437013,Herpes zoster [Zona]
+I87,34,0.01739335062437013,Outros transtornos das veias
+N13,34,0.01739335062437013,Uropatia obstrutiva e por refluxo
+Y19,34,0.01739335062437013,"Envenenamento [intoxicação] por e exposição a outros produtos químicos e substâncias nocivas e aos não especificados, intenção não determinada"
+M00,33,0.016881781488359244,Artrite piogênica
+A86,32,0.016370212352348357,"Encefalite viral, não especificada"
+C52,32,0.016370212352348357,Neoplasia maligna da vagina
+C94,32,0.016370212352348357,Outras leucemias de células de tipo especificado
+D75,32,0.016370212352348357,Outras doenças do sangue e dos órgãos hematopoéticos
+K71,32,0.016370212352348357,Doença hepática tóxica
+C69,31,0.01585864321633747,Neoplasia maligna do olho e anexos
+E16,31,0.01585864321633747,Outros transtornos da secreção pancreática interna
+E83,31,0.01585864321633747,Distúrbios do metabolismo de minerais
+E84,31,0.01585864321633747,Fibrose cística
+J39,31,0.01585864321633747,Outras doenças das vias aéreas superiores
+J85,31,0.01585864321633747,Abscesso do pulmão e do mediastino
+M16,31,0.01585864321633747,Coxartrose [artrose do quadril]
+B45,30,0.015347074080326586,Criptococose
+C05,30,0.015347074080326586,Neoplasia maligna do palato
+C13,30,0.015347074080326586,Neoplasia maligna da hipofaringe
+C77,30,0.015347074080326586,Neoplasia maligna secundária e não especificada dos gânglios linfáticos
+G37,30,0.015347074080326586,Outras doenças desmielinizantes do sistema nervoso central
+I40,30,0.015347074080326586,Miocardite aguda
+K21,30,0.015347074080326586,Doença de refluxo gastroesofágico
+M81,30,0.015347074080326586,Osteoporose sem fratura patológica
+X72,30,0.015347074080326586,Lesão autoprovocada intencionalmente por disparo de arma de fogo de mão
+E12,29,0.0148355049443157,Diabetes mellitus relacionado com a desnutrição
+G23,29,0.0148355049443157,Outras doenças degenerativas dos gânglios da base
+L93,29,0.0148355049443157,Lúpus eritematoso
+L97,29,0.0148355049443157,Úlcera dos membros inferiores não classificada em outra parte
+D25,28,0.014323935808304813,Leiomioma do útero
+G10,28,0.014323935808304813,Doença de Huntington
+N15,28,0.014323935808304813,Outras doenças renais túbulo-intersticiais
+B23,27,0.013812366672293927,Doença pelo vírus da imunodeficiência humana [HIV] resultando em outras doenças
+B90,27,0.013812366672293927,Seqüelas de tuberculose
+C31,27,0.013812366672293927,Neoplasia maligna dos seios da face
+I07,27,0.013812366672293927,Doenças reumáticas da valva tricúspide
+I99,27,0.013812366672293927,Outros transtornos do aparelho circulatório e os não especificados
+J67,27,0.013812366672293927,Pneumonite de hipersensibilidade devida a poeiras orgânicas
+V13,27,0.013812366672293927,"Ciclista traumatizado em colisão com um automóvel, ""pick up"" ou caminhonete"
+V54,27,0.013812366672293927,Ocupante de uma caminhonete traumatizado em colisão com um veículo de transporte pesado ou um ônibus
+A39,26,0.01330079753628304,Infecção meningogócica
+G06,26,0.01330079753628304,Abscesso e granuloma intracranianos e intra-raquidianos
+I95,26,0.01330079753628304,Hipotensão
+K37,26,0.01330079753628304,"Apendicite, sem outras especificações"
+O62,26,0.01330079753628304,Anormalidades da contração uterina
+X71,26,0.01330079753628304,Lesão autoprovocada intencionalmente por afogamento e submersão
+X76,26,0.01330079753628304,"Lesão autoprovocada intencionalmente pela fumaça, pelo fogo e por chamas"
+A19,25,0.012789228400272155,Tuberculose miliar
+B00,25,0.012789228400272155,Infecções pelo vírus do herpes [herpes simples]
+C37,25,0.012789228400272155,Neoplasia maligna do timo
+I06,25,0.012789228400272155,Doenças reumáticas da valva aórtica
+N49,25,0.012789228400272155,"Transtornos inflamatórios de órgãos genitais masculinos, não classificados em outra parte"
+X78,25,0.012789228400272155,Lesão autoprovocada intencionalmente por objeto cortante ou penetrante
+C08,24,0.012277659264261269,Neoplasia maligna de outras glândulas salivares maiores e as não especificadas
+I89,24,0.012277659264261269,Outros transtornos não-infecciosos dos vasos linfáticos e dos gânglios linfáticos
+J06,24,0.012277659264261269,Infecções agudas das vias aéreas superiores de localizações múltiplas e não especificadas
+K73,24,0.012277659264261269,Hepatite crônica não classificada em outra parte
+N32,24,0.012277659264261269,Outros transtornos da bexiga
+N76,24,0.012277659264261269,Outras afecções inflamatórias da vagina e da vulva
+G45,23,0.011766090128250382,Acidentes vasculares cerebrais isquêmicos transitórios e síndromes correlatas
+I81,23,0.011766090128250382,Trombose da veia porta
+J68,23,0.011766090128250382,"Afecções respiratórias devidas a inalação de produtos químicos, gases, fumaças e vapores"
+X97,23,0.011766090128250382,"Agressão por meio de fumaça, fogo e chamas"
+A92,22,0.011254520992239496,Outras febres virais transmitidas por mosquitos
+C04,22,0.011254520992239496,Neoplasia maligna do assoalho da boca
+C30,22,0.011254520992239496,Neoplasia maligna da cavidade nasal e do ouvido médio
+D39,22,0.011254520992239496,Neoplasia de comportamento incerto ou desconhecido dos órgãos genitais femininos
+G96,22,0.011254520992239496,Outros transtornos do sistema nervoso central
+M19,22,0.011254520992239496,Outras artroses
+R64,22,0.011254520992239496,Caquexia
+Y21,22,0.011254520992239496,"Afogamento e submersão, intenção não determinada"
+A08,21,0.01074295185622861,"Infecções intestinais virais, outras e as não especificadas"
+J70,21,0.01074295185622861,Afecções respiratórias devida a outros agentes externos
+M05,21,0.01074295185622861,Artrite reumatóide soro-positiva
+Q61,21,0.01074295185622861,Doenças císticas do rim
+X42,21,0.01074295185622861,Envenenamento [intoxicação] acidental por e exposição a narcóticos e psicodislépticos [alucinógenos] não classificados em outra parte
+X79,21,0.01074295185622861,Lesão autoprovocada intencionalmente por objeto contundente
+D33,20,0.010231382720217725,Neoplasia benigna do encéfalo e de outras partes do sistema nervoso central
+E41,20,0.010231382720217725,Marasmo nutricional
+J94,20,0.010231382720217725,Outras afecções pleurais
+O45,20,0.010231382720217725,Descolamento prematuro da placenta [abruptio placentae]
+Q24,20,0.010231382720217725,Outras malformações congênitas do coração
+R56,20,0.010231382720217725,"Convulsões, não classificadas em outra parte"
+V19,20,0.010231382720217725,Ciclista traumatizado em outros acidentes de transporte e em acidentes de transporte não especificados
+Y86,20,0.010231382720217725,Seqüelas de outros acidentes
+B19,19,0.009719813584206838,Hepatite viral não especificada
+D35,19,0.009719813584206838,Neoplasia benigna de outras glândulas endócrinas e das não especificadas
+G95,19,0.009719813584206838,Outras doenças da medula espinal
+I22,19,0.009719813584206838,Infarto do miocárdio recorrente
+M48,19,0.009719813584206838,Outras espondilopatias
+N73,19,0.009719813584206838,Outras doenças inflamatórias pélvicas femininas
+O90,19,0.009719813584206838,Complicações do puerpério não classificadas em outra parte
+V14,19,0.009719813584206838,Ciclista traumatizado em colisão com um veículo de transporte pesado ou um ônibus
+V58,19,0.009719813584206838,Ocupante de uma caminhonete traumatizado em um acidente de transporte sem colisão
+Y14,19,0.009719813584206838,"Envenenamento [intoxicação] por e exposição a outras drogas, medicamentos e substâncias biológicas e as não especificadas, intenção não determinada"
+A17,18,0.009208244448195952,Tuberculose do sistema nervoso
+B55,18,0.009208244448195952,Leishmaniose
+C09,18,0.009208244448195952,Neoplasia maligna da amígdala
+D53,18,0.009208244448195952,Outras anemias nutricionais
+E44,18,0.009208244448195952,Desnutrição protéico-calórica de graus moderado e leve
+F31,18,0.009208244448195952,Transtorno afetivo bipolar
+G82,18,0.009208244448195952,Paraplegia e tetraplegia
+H66,18,0.009208244448195952,Otite média supurativa e as não especificadas
+L10,18,0.009208244448195952,Pênfigo
+V74,18,0.009208244448195952,Ocupante de um ônibus traumatizado em colisão com um veículo de transporte pesado ou um ônibus
+A18,17,0.008696675312185065,Tuberculose de outros órgãos
+B25,17,0.008696675312185065,Doença por citomegalovírus
+C39,17,0.008696675312185065,Neoplasia maligna de outras localizações e de localizações mal definidas do aparelho respiratório e dos órgãos intratorácicos
+C66,17,0.008696675312185065,Neoplasia maligna dos ureteres
+D50,17,0.008696675312185065,Anemia por deficiência de ferro
+D58,17,0.008696675312185065,Outras anemias hemolíticas hereditárias
+K45,17,0.008696675312185065,Outras hérnias abdominais
+M17,17,0.008696675312185065,Gonartrose [artrose do joelho]
+M51,17,0.008696675312185065,Outros transtornos de discos intervertebrais
+N31,17,0.008696675312185065,Disfunções neuromusculares da bexiga não classificados em outra parte
+O75,17,0.008696675312185065,Outras complicações do trabalho de parto e do parto não classificadas em outra parte
+Y24,17,0.008696675312185065,"Disparo de outra arma de fogo e de arma de fogo não especificada, intenção não determinada"
+Y28,17,0.008696675312185065,"Contato com objeto cortante ou penetrante, intenção não determinada"
+A27,16,0.008185106176174179,Leptospirose
+C65,16,0.008185106176174179,Neoplasia maligna da pelve renal
+C93,16,0.008185106176174179,Leucemia monocítica
+G09,16,0.008185106176174179,Seqüelas de doenças inflamatórias do sistema nervoso central
+G36,16,0.008185106176174179,Outras desmielinizações disseminadas agudas
+I36,16,0.008185106176174179,Transtornos não-reumáticos da valva tricúspide
+K61,16,0.008185106176174179,Abscesso das regiões anal e retal
+L12,16,0.008185106176174179,Penfigóide
+N00,16,0.008185106176174179,Síndrome nefrítica aguda
+Q27,16,0.008185106176174179,Outras malformações congênitas do sistema vascular periférico
+V95,16,0.008185106176174179,Acidente de aeronave a motor causando traumatismo ao ocupante
+W20,16,0.008185106176174179,"Impacto causado por objeto lançado, projetado ou em queda"
+Y26,16,0.008185106176174179,"Exposição a fumaça, fogo e chamas, intenção não determinada"
+Y89,16,0.008185106176174179,Seqüelas de outras causas externas
+A40,15,0.007673537040163293,Septicemia estreptocócica
+C88,15,0.007673537040163293,Doenças imunoproliferativas malignas
+C97,15,0.007673537040163293,Neoplasias malignas de localizações múltiplas independentes (primárias)
+D44,15,0.007673537040163293,Neoplasia de comportamento incerto ou desconhecido das glândulas endócrinas
+D86,15,0.007673537040163293,Sarcoidose
+E13,15,0.007673537040163293,Outros tipos especificados de diabetes mellitus
+F33,15,0.007673537040163293,Transtorno depressivo recorrente
+F41,15,0.007673537040163293,Outros transtornos ansiosos
+F99,15,0.007673537040163293,Transtorno mental não especificado em outra parte
+J32,15,0.007673537040163293,Sinusite crônica
+J64,15,0.007673537040163293,Pneumoconiose não especificada
+Y87,15,0.007673537040163293,"Seqüelas de uma lesão autoprovocada intencionalmente, de agressão ou de um fato cuja intenção é indeterminada"
+B59,14,0.007161967904152407,Pneumocistose
+C46,14,0.007161967904152407,Sarcoma de Kaposi
+D45,14,0.007161967904152407,Policitemia vera
+G21,14,0.007161967904152407,Parkinsonismo secundário
+G60,14,0.007161967904152407,Neuropatia hereditária e idiopática
+H70,14,0.007161967904152407,Mastoidite e afecções correlatas
+I01,14,0.007161967904152407,Febre reumática com comprometimento do coração
+K62,14,0.007161967904152407,Outras doenças do reto e do ânus
+N70,14,0.007161967904152407,Salpingite e ooforite
+O85,14,0.007161967904152407,Infecção puerperal
+Q25,14,0.007161967904152407,Malformações congênitas das grandes artérias
+V18,14,0.007161967904152407,Ciclista traumatizado em um acidente de transporte sem colisão
+W70,14,0.007161967904152407,Afogamento e submersão conseqüentes a queda dentro de águas naturais
+X44,14,0.007161967904152407,"Envenenamento [intoxicação] acidental por e exposição a outras drogas, medicamentos e substâncias biológicas não especificadas"
+Y33,14,0.007161967904152407,"Outros fatos ou eventos especificados, intenção não determinada"
+B37,13,0.00665039876814152,Candidíase
+B58,13,0.00665039876814152,Toxoplasmose
+B69,13,0.00665039876814152,Cisticercose
+B99,13,0.00665039876814152,"Doenças infecciosas, outras e as não especificadas"
+C60,13,0.00665039876814152,Neoplasia maligna do pênis
+D18,13,0.00665039876814152,Hemangioma e linfangioma de qualquer localização
+D41,13,0.00665039876814152,Neoplasia de comportamento incerto ou desconhecido dos órgãos urinários
+D72,13,0.00665039876814152,Outros transtornos dos glóbulos brancos
+F14,13,0.00665039876814152,Transtornos mentais e comportamentais devidos ao uso da cocaína
+F19,13,0.00665039876814152,Transtornos mentais e comportamentais devidos ao uso de múltiplas drogas e ao uso de outras substâncias psicoativas
+I30,13,0.00665039876814152,Pericardite aguda
+I45,13,0.00665039876814152,Outros transtornos de condução
+J16,13,0.00665039876814152,Pneumonia devida a outros microorganismos infecciosos especificados não classificados em outra parte
+J38,13,0.00665039876814152,Doenças das cordas vocais e da laringe não classificadas em outra parte
+N83,13,0.00665039876814152,"Transtornos não-inflamatórios do ovário, da trompa de Falópio e do ligamento largo"
+Q28,13,0.00665039876814152,Outras malformações congênitas do aparelho circulatório
+Q87,13,0.00665039876814152,Outras síndromes com malformações congênitas que acometem múltiplos sistemas
+R19,13,0.00665039876814152,Outros sintomas e sinais relativos ao aparelho digestivo e ao abdome
+V78,13,0.00665039876814152,Ocupante de um ônibus traumatizado em um acidente de transporte sem colisão
+X37,13,0.00665039876814152,Vítima de tempestade cataclísmica
+G08,12,0.0061388296321306345,Flebite e tromboflebite intracranianas e intra-raquidianas
+I28,12,0.0061388296321306345,Outras doenças dos vasos pulmonares
+J04,12,0.0061388296321306345,Laringite e traqueíte agudas
+W86,12,0.0061388296321306345,Exposição a outra corrente elétrica especificada
+Y88,12,0.0061388296321306345,Seqüelas de cuidado médico ou cirúrgico considerados como uma causa externa
+B44,11,0.005627260496119748,Aspergilose
+C47,11,0.005627260496119748,Neoplasia maligna dos nervos periféricos e do sistema nervoso autônomo
+D73,11,0.005627260496119748,Doenças do baço
+E34,11,0.005627260496119748,Outros transtornos endócrinos
+F05,11,0.005627260496119748,Delirium não induzido pelo álcool ou por outras substâncias psicoativas
+J03,11,0.005627260496119748,Amigdalite aguda
+K20,11,0.005627260496119748,Esofagite
+L51,11,0.005627260496119748,Eritema polimorfo (eritema multiforme)
+M45,11,0.005627260496119748,Espondilite ancilosante
+R04,11,0.005627260496119748,Hemorragia das vias respiratórias
+R58,11,0.005627260496119748,Hemorragia não classificada em outra parte
+V80,11,0.005627260496119748,Pessoa montada em animal ou ocupante de um veículo a tração animal traumatizado em um acidente de transporte
+V90,11,0.005627260496119748,Acidente com embarcação causando afogamento e submersão
+X82,11,0.005627260496119748,Lesão autoprovocada intencionalmente por impacto de um veículo a motor
+Y08,11,0.005627260496119748,Agressão por outros meios especificados
+Y11,11,0.005627260496119748,"Envenenamento [intoxicação] por e exposição a anticonvulsivantes [antiepilépticos], sedativos, hipnóticos, antiparkinsonianos e psicotrópicos não classificados em outra parte, intenção não determinada"
+A30,10,0.005115691360108862,Hanseníase [doença de Hansen] [lepra]
+D05,10,0.005115691360108862,Carcinoma in situ da mama
+D13,10,0.005115691360108862,Neoplasia benigna de outras partes e de partes mal definidas do aparelho digestivo
+D21,10,0.005115691360108862,Outras neoplasias benignas do tecido conjuntivo e de outros tecidos moles
+E64,10,0.005115691360108862,Seqüelas de desnutrição e de outras deficiências nutricionais
+G98,10,0.005115691360108862,Outros transtornos do sistema nervoso não classificados em outra parte
+J21,10,0.005115691360108862,Bronquiolite aguda
+K90,10,0.005115691360108862,Má-absorção intestinal
+L40,10,0.005115691360108862,Psoríase
+M25,10,0.005115691360108862,Outros transtornos articulares não classificados em outra parte
+N80,10,0.005115691360108862,Endometriose
+V05,10,0.005115691360108862,Pedestre traumatizado em colisão com trem [comboio] ou um veículo ferroviário
+V42,10,0.005115691360108862,Ocupante de um automóvel [carro] traumatizado em colisão com outro veículo a motor de duas ou três rodas
+V79,10,0.005115691360108862,Ocupante de um ônibus traumatizado em outros acidentes de transporte e em acidentes de transporte não especificados
+W34,10,0.005115691360108862,Projéteis de outras armas de fogo e das não especificadas
+W80,10,0.005115691360108862,Inalação e ingestão de outros objetos causando obstrução do trato respiratório
+X20,10,0.005115691360108862,Contato com serpentes e lagartos venenosos
+X41,10,0.005115691360108862,"Envenenamento [intoxicação] acidental por e exposição a anticonvulsivantes [antiepilépticos], sedativos, hipnóticos, antiparkinsonianos e psicotrópicos não classificadas em outra parte"
+X49,10,0.005115691360108862,Envenenamento [intoxicação] acidental por e exposição a outras substâncias químicas nocivas e às não especificadas
+X67,10,0.005115691360108862,Auto-intoxicação intencional por outros gases e vapores
+C33,9,0.004604122224097976,Neoplasia maligna da traquéia
+D76,9,0.004604122224097976,Algumas doenças que envolvem o tecido linforreticular e o sistema reticulohistiocítico
+G72,9,0.004604122224097976,Outras miopatias
+G80,9,0.004604122224097976,Paralisia cerebral
+I00,9,0.004604122224097976,Febre reumática sem menção de comprometimento do coração
+J41,9,0.004604122224097976,Bronquite crônica simples e a mucopurulenta
+K41,9,0.004604122224097976,Hérnia femoral
+M60,9,0.004604122224097976,Miosite
+O44,9,0.004604122224097976,Placenta prévia
+Q07,9,0.004604122224097976,Outras malformações congênitas do sistema nervoso
+Q44,9,0.004604122224097976,"Malformações congênitas da vesícula biliar, das vias biliares e do fígado"
+Q85,9,0.004604122224097976,Facomatoses não classificadas em outra parte
+W08,9,0.004604122224097976,Queda de outro tipo de mobília
+W67,9,0.004604122224097976,Afogamento e submersão em piscina
+X45,9,0.004604122224097976,Envenenamento [intoxicação] acidental por e exposição ao álcool
+Y03,9,0.004604122224097976,Agressão por meio de impacto de um veículo a motor
+Y85,9,0.004604122224097976,Seqüelas de acidentes de transporte
+B33,8,0.004092553088087089,Outras doenças por vírus não classificada em outra parte
+D03,8,0.004092553088087089,Melanoma in situ
+E27,8,0.004092553088087089,Outros transtornos da glândula supra-renal
+I37,8,0.004092553088087089,Transtornos da valva pulmonar
+M13,8,0.004092553088087089,Outras artrites
+M47,8,0.004092553088087089,Espondilose
+N05,8,0.004092553088087089,Síndrome nefrítica não especificada
+N85,8,0.004092553088087089,"Outros transtornos não-inflamatórios do útero, exceto do colo do útero"
+O00,8,0.004092553088087089,Gravidez ectópica
+O95,8,0.004092553088087089,Morte obstétrica de causa não especificada
+Q01,8,0.004092553088087089,Encefalocele
+V26,8,0.004092553088087089,Motociclista traumatizado em colisão com outro veículo não-motorizado
+V40,8,0.004092553088087089,Ocupante de um automóvel [carro] traumatizado em colisão com um pedestre ou um animal
+W07,8,0.004092553088087089,Queda de uma cadeira
+X00,8,0.004092553088087089,Exposição a fogo não-controlado em um edifício ou outro tipo de construção
+A87,7,0.0035809839520762033,Meningite viral
+B91,7,0.0035809839520762033,Seqüelas de poliomielite
+C03,7,0.0035809839520762033,Neoplasia maligna da gengiva
+D62,7,0.0035809839520762033,Anemia aguda pós-hemorrágica
+E06,7,0.0035809839520762033,Tireoidite
+E07,7,0.0035809839520762033,Outros transtornos da tireóide
+F50,7,0.0035809839520762033,Transtornos da alimentação
+K13,7,0.0035809839520762033,Outras doenças do lábio e da mucosa oral
+M89,7,0.0035809839520762033,Outros transtornos ósseos
+N04,7,0.0035809839520762033,Síndrome nefrótica
+N82,7,0.0035809839520762033,Fístulas do trato genital feminino
+O71,7,0.0035809839520762033,Outros traumatismos obstétricos
+R06,7,0.0035809839520762033,Anormalidades da respiração
+V12,7,0.0035809839520762033,Ciclista traumatizado em colisão com um veículo a motor de duas ou três rodas
+V68,7,0.0035809839520762033,Ocupante de um veículo de transporte pesado traumatizado em um acidente de transporte sem colisão
+V69,7,0.0035809839520762033,Ocupante de um veículo de transporte pesado traumatizado em outros acidentes de transporte não especificados
+X62,7,0.0035809839520762033,"Auto-intoxicação por e exposição, intencional, a narcóticos e psicodislépticos [alucinógenos] não classificados em outra parte"
+X92,7,0.0035809839520762033,Agressão por meio de afogamento e submersão
+Y18,7,0.0035809839520762033,"Envenenamento [intoxicação] por e exposição a pesticidas, intenção não determinada"
+A35,6,0.0030694148160653172,Outros tipos de tétano
+B87,6,0.0030694148160653172,Miíase
+C58,6,0.0030694148160653172,Neoplasia maligna da placenta
+D02,6,0.0030694148160653172,Carcinoma in situ do ouvido médio e do aparelho respiratório
+D15,6,0.0030694148160653172,Neoplasia benigna de outros órgãos intratorácicos e dos não especificados
+D42,6,0.0030694148160653172,Neoplasia de comportamento incerto ou desconhecido das meninges
+D89,6,0.0030694148160653172,Outros transtornos que comprometem o mecanismo imunitário não classificados em outra parte
+E15,6,0.0030694148160653172,Coma hipoglicêmico não-diabético
+E23,6,0.0030694148160653172,Hipofunção e outros transtornos da hipófise
+K30,6,0.0030694148160653172,Dispepsia
+M50,6,0.0030694148160653172,Transtornos dos discos cervicais
+N21,6,0.0030694148160653172,Calculose do trato urinário inferior
+O03,6,0.0030694148160653172,Aborto espontâneo
+O06,6,0.0030694148160653172,Aborto não especificado
+O10,6,0.0030694148160653172,"Hipertensão pré-existente complicando a gravidez, o parto e o puerpério"
+O43,6,0.0030694148160653172,Transtornos da placenta
+Q20,6,0.0030694148160653172,Malformações congênitas das câmaras e das comunicações cardíacas
+V53,6,0.0030694148160653172,Ocupante de uma caminhonete traumatizado em colisão com um automóvel [carro] ou uma caminhonete
+V57,6,0.0030694148160653172,Ocupante de uma caminhonete traumatizado em colisão com um objeto fixo ou parado
+W11,6,0.0030694148160653172,Queda em ou de escadas de mão
+W22,6,0.0030694148160653172,Impacto acidental ativo ou passivo causado por outros objetos
+W85,6,0.0030694148160653172,Exposição a linhas de transmissão de corrente elétrica
+X23,6,0.0030694148160653172,"Contato com abelhas, vespas e vespões"
+X94,6,0.0030694148160653172,"Agressão por meio de disparo de espingarda, carabina ou arma de fogo de maior calibre"
+Y35,6,0.0030694148160653172,Intervenção legal
+Y45,6,0.0030694148160653172,"Efeitos adversos de substâncias analgésicas, antipiréticas e antiinflamatórias"
+Y57,6,0.0030694148160653172,Efeitos adversos de outras drogas e medicamentos e as não especificadas
+A06,5,0.002557845680054431,Amebíase
+B39,5,0.002557845680054431,Histoplasmose
+B49,5,0.002557845680054431,Micose não especificada
+B54,5,0.002557845680054431,Malária não especificada
+D01,5,0.002557845680054431,Carcinoma in situ de outros órgãos digestivos
+D12,5,0.002557845680054431,"Neoplasia benigna do cólon, reto, canal anal e ânus"
+D56,5,0.002557845680054431,Talassemia
+D60,5,0.002557845680054431,"Aplasia pura da série vermelha, adquirida [eritroblastopenia]"
+D80,5,0.002557845680054431,Imunodeficiência com predominância de defeitos de anticorpos
+E51,5,0.002557845680054431,Deficiência de tiamina
+E80,5,0.002557845680054431,Distúrbios do metabolismo da porfirina e da bilirrubina
+I84,5,0.002557845680054431,Hemorróidas
+J01,5,0.002557845680054431,Sinusite aguda
+M30,5,0.002557845680054431,Poliarterite nodosa e afecções correlatas
+M85,5,0.002557845680054431,Outros transtornos da densidade e da estrutura ósseas
+N42,5,0.002557845680054431,Outras afecções da próstata
+N61,5,0.002557845680054431,Transtornos inflamatórios da mama
+N81,5,0.002557845680054431,Prolapso genital feminino
+O13,5,0.002557845680054431,Hipertensão gestacional [induzida pela gravidez] sem proteinúria significativa
+O24,5,0.002557845680054431,Diabetes mellitus na gravidez
+O87,5,0.002557845680054431,Complicações venosas no puerpério
+R00,5,0.002557845680054431,Anormalidades do batimento cardíaco
+R50,5,0.002557845680054431,Febre de origem desconhecida e de outras origens
+R55,5,0.002557845680054431,Síncope e colapso
+V59,5,0.002557845680054431,Ocupante de uma caminhonete traumatizado em outros acidentes de transporte e em acidentes de transporte não especificados
+W24,5,0.002557845680054431,"Contato com elevadores e instrumentos de transmissão, não classificados em outra parte"
+W55,5,0.002557845680054431,Mordedura ou golpe provocado por outros animais mamíferos
+W68,5,0.002557845680054431,Afogamento e submersão conseqüente a queda dentro de uma piscina
+X04,5,0.002557845680054431,Exposição a combustão de substância muito inflamável
+X33,5,0.002557845680054431,Vítima de raio
+X65,5,0.002557845680054431,Auto-intoxicação voluntária por álcool
+Y12,5,0.002557845680054431,"Envenenamento [intoxicação] por e exposição a narcóticos e a psicodislépticos [alucinógenos] não classificados em outra parte, intenção não determinada"
+A02,4,0.0020462765440435447,Outras infecções por Salmonella
+A42,4,0.0020462765440435447,Actinomicose
+A99,4,0.0020462765440435447,Febres hemorrágicas virais não especificadas
+B01,4,0.0020462765440435447,Varicela [Catapora]
+B15,4,0.0020462765440435447,Hepatite aguda A
+B43,4,0.0020462765440435447,Cromomicose e abscesso feomicótico
+B50,4,0.0020462765440435447,Malária por Plasmodium falciparum
+D06,4,0.0020462765440435447,Carcinoma in situ do colo do útero (cérvix)
+D36,4,0.0020462765440435447,Neoplasia benigna de outras localizações e de localizações não especificadas
+D51,4,0.0020462765440435447,Anemia por deficiência de vitamina B12
+E72,4,0.0020462765440435447,Outros distúrbios do metabolismo de aminoácidos
+F29,4,0.0020462765440435447,Psicose não-orgânica não especificada
+G92,4,0.0020462765440435447,Encefalopatia tóxica
+H83,4,0.0020462765440435447,Outros transtornos do ouvido interno
+I86,4,0.0020462765440435447,Varizes de outras localizações
+J02,4,0.0020462765440435447,Faringite aguda
+J13,4,0.0020462765440435447,Pneumonia devida a Streptococcus pneumoniae
+J60,4,0.0020462765440435447,Pneumoconiose dos mineiros de carvão
+J82,4,0.0020462765440435447,"Eosinofilia pulmonar, não classificada em outra parte"
+K12,4,0.0020462765440435447,Estomatite e lesões correlatas
+K60,4,0.0020462765440435447,Fissura e fístula das regiões anal e retal
+M10,4,0.0020462765440435447,Gota
+N26,4,0.0020462765440435447,"Rim contraído, não especificado"
+N35,4,0.0020462765440435447,Estenose da uretra
+N41,4,0.0020462765440435447,Doenças inflamatórias da próstata
+N64,4,0.0020462765440435447,Outras doenças da mama
+N75,4,0.0020462765440435447,Doenças da glândula de Bartholin
+N93,4,0.0020462765440435447,Outros sangramentos anormais do útero e da vagina
+O16,4,0.0020462765440435447,Hipertensão materna não especificada
+O26,4,0.0020462765440435447,Assistência materna por outras complicações ligadas predominantemente à gravidez
+O46,4,0.0020462765440435447,Hemorragia anteparto não classificada em outra parte
+O86,4,0.0020462765440435447,Outras infecções puerperais
+Q06,4,0.0020462765440435447,Outras malformações congênitas da medula espinhal
+Q43,4,0.0020462765440435447,Outras malformações congênitas do intestino
+Q89,4,0.0020462765440435447,Outras malformações congênitas não classificadas em outra parte
+R07,4,0.0020462765440435447,Dor de garganta e no peito
+R40,4,0.0020462765440435447,"Sonolência, estupor e coma"
+V86,4,0.0020462765440435447,"Ocupante de um veículo especial para qualquer terreno ou de outro veículo a motor projetado essencialmente para uso não em via pública, traumatizado em um acidente de transporte"
+V96,4,0.0020462765440435447,Acidente de uma aeronave sem motor causando traumatismo a ocupante
+W14,4,0.0020462765440435447,Queda de árvore
+W15,4,0.0020462765440435447,Queda de penhasco
+W25,4,0.0020462765440435447,Contato com vidro cortante
+X08,4,0.0020462765440435447,"Exposição a outro tipo especificado de fumaça, fogo ou chamas"
+X40,4,0.0020462765440435447,"Envenenamento [intoxicação] acidental por e exposição a analgésicos, antipiréticos e anti-reumáticos, não-opiáceos"
+X50,4,0.0020462765440435447,Excesso de exercícios e movimentos vigorosos ou repetitivos
+Y15,4,0.0020462765440435447,"Envenenamento [intoxicação] por e exposição ao álcool, intenção não determinada"
+Y17,4,0.0020462765440435447,"Envenenamento [intoxicação] por e exposição a outros gases e vapores, intenção não determinada"
+A26,3,0.0015347074080326586,Erisipelóide
+A50,3,0.0015347074080326586,Sífilis congênita
+A77,3,0.0015347074080326586,Febre maculosa [rickettsioses transmitidas por carrapatos]
+A95,3,0.0015347074080326586,Febre amarela
+B40,3,0.0015347074080326586,Blastomicose
+B41,3,0.0015347074080326586,Paracoccidioidomicose
+C12,3,0.0015347074080326586,Neoplasia maligna do seio piriforme
+D04,3,0.0015347074080326586,Carcinoma in situ da pele
+D09,3,0.0015347074080326586,Carcinoma in situ de outras localizações e das não especificadas
+D19,3,0.0015347074080326586,Neoplasia benigna de tecido mesotelial
+D66,3,0.0015347074080326586,Deficiência hereditária do fator VIII
+D71,3,0.0015347074080326586,Transtornos funcionais dos neutrófilos polimorfonucleares
+E04,3,0.0015347074080326586,Outros bócios não-tóxicos
+E22,3,0.0015347074080326586,Hiperfunção da hipófise
+E79,3,0.0015347074080326586,Distúrbios do metabolismo de purina e pirimidina
+F23,3,0.0015347074080326586,Transtornos psicóticos agudos e transitórios
+G25,3,0.0015347074080326586,Outras doenças extrapiramidais e transtornos dos movimentos
+H44,3,0.0015347074080326586,Transtornos do globo ocular
+K08,3,0.0015347074080326586,Outros transtornos dos dentes e de suas estruturas de sustentação
+M23,3,0.0015347074080326586,Transtornos internos dos joelhos
+M79,3,0.0015347074080326586,"Outros transtornos dos tecidos moles, não classificados em outra parte"
+M87,3,0.0015347074080326586,Osteonecrose
+N34,3,0.0015347074080326586,Uretrite e síndrome uretral
+N48,3,0.0015347074080326586,Outros transtornos do pênis
+N71,3,0.0015347074080326586,"Doença inflamatória do útero, exceto o colo"
+O02,3,0.0015347074080326586,Outros produtos anormais da concepção
+O11,3,0.0015347074080326586,Distúrbio hipertensivo pré-existente com proteinúria superposta
+O41,3,0.0015347074080326586,Outros transtornos das membranas e do líquido amniótico
+O67,3,0.0015347074080326586,Trabalho de parto e parto complicados por hemorragia intraparto não classificados em outra parte
+Q03,3,0.0015347074080326586,Hidrocefalia congênita
+Q22,3,0.0015347074080326586,Malformações congênitas das valvas pulmonar e tricúspide
+Q33,3,0.0015347074080326586,Malformações congênitas do pulmão
+Q39,3,0.0015347074080326586,Malformações congênitas do esôfago
+Q40,3,0.0015347074080326586,Outras malformações congênitas do trato digestivo superior
+R63,3,0.0015347074080326586,Sintomas e sinais relativos à ingestão de alimentos e líquidos
+R90,3,0.0015347074080326586,Resultados anormais de exames para diagnóstico por imagem do sistema nervoso central
+V39,3,0.0015347074080326586,Ocupante de um triciclo motorizado traumatizado em outros acidentes de transporte e em acidentes de transporte não especificados
+V45,3,0.0015347074080326586,Ocupante de um automóvel [carro] traumatizado em colisão com um trem [comboio] ou um veículo ferroviário
+V77,3,0.0015347074080326586,Ocupante de um ônibus traumatizado em colisão com um objeto fixo ou parado
+V92,3,0.0015347074080326586,Afogamento e submersão relacionados com transporte por água sem acidente com a embarcação
+W21,3,0.0015347074080326586,Impacto acidental ativo ou passivo causado por equipamento esportivo
+W28,3,0.0015347074080326586,Contato com segadeira motorizada para cortar ou aparar a grama
+W40,3,0.0015347074080326586,Explosão de outros materiais
+W44,3,0.0015347074080326586,Penetração de corpo estranho no ou através de olho ou orifício natural
+W49,3,0.0015347074080326586,Exposição a outras forças mecânicas inanimadas e às não especificadas
+W54,3,0.0015347074080326586,Mordedura ou golpe provocado por cão
+W76,3,0.0015347074080326586,Outro enforcamento e estrangulamento acidental
+X12,3,0.0015347074080326586,Contato com outros líquidos quentes
+X21,3,0.0015347074080326586,Contato com aranhas venenosas
+X36,3,0.0015347074080326586,"Vítima de avalanche, desabamento de terra e outros movimentos da superfície terrestre"
+X47,3,0.0015347074080326586,Intoxicação acidental por e exposição a outros gases e vapores
+X58,3,0.0015347074080326586,Exposição a outros fatores especificados
+X60,3,0.0015347074080326586,"Auto-intoxicação por e exposição, intencional, a analgésicos, antipiréticos e anti-reumáticos, não-opiáceos"
+X63,3,0.0015347074080326586,"Auto-intoxicação por e exposição, intencional, a outras substâncias farmacológicas de ação sobre o sistema nervoso autônomo"
+X66,3,0.0015347074080326586,"Auto-intoxicação intencional por solventes orgânicos, hidrocarbonetos halogenados e seus vapores"
+X81,3,0.0015347074080326586,Lesão autoprovocada intencionalmente por precipitação ou permanência diante de um objeto em movimento
+Y48,3,0.0015347074080326586,Efeitos adversos de anestésicos e gases terapêuticos
+Y60,3,0.0015347074080326586,"Corte, punção, perfuração ou hemorragia acidentais durante a prestação de cuidados médicos ou cirúrgicos"
+A05,2,0.0010231382720217723,"Outras intoxicações alimentares bacterianas, não classificadas em outra parte"
+A21,2,0.0010231382720217723,Tularemia
+A52,2,0.0010231382720217723,Sífilis tardia
+A53,2,0.0010231382720217723,Outras formas e as não especificadas da sífilis
+A94,2,0.0010231382720217723,"Febre viral transmitida por artrópodes, não especificada"
+A98,2,0.0010231382720217723,"Outras febres hemorrágicas por vírus, não classificadas em outra parte"
+B51,2,0.0010231382720217723,Malária por Plasmodium vivax
+C00,2,0.0010231382720217723,Neoplasia maligna do lábio
+D00,2,0.0010231382720217723,"Carcinoma in situ da cavidade oral, do esôfago e do estômago"
+D07,2,0.0010231382720217723,Carcinoma in situ de outros órgãos genitais e dos não especificados
+D14,2,0.0010231382720217723,Neoplasia benigna do ouvido médio e do aparelho respiratório
+D16,2,0.0010231382720217723,Neoplasia benigna de osso e de cartilagem articular
+D17,2,0.0010231382720217723,Neoplasia lipomatosa benigna
+D20,2,0.0010231382720217723,Neoplasia benigna de tecido mole do retroperitônio e do peritônio
+D24,2,0.0010231382720217723,Neoplasia benigna da mama
+D40,2,0.0010231382720217723,Neoplasia de comportamento incerto ou desconhecido dos órgãos genitais masculinos
+D55,2,0.0010231382720217723,Anemia devida a transtornos enzimáticos
+D74,2,0.0010231382720217723,Metemoglobinemia
+D82,2,0.0010231382720217723,"Imunodeficiência associada com outros defeitos ""major"""
+D83,2,0.0010231382720217723,Imunodeficiência comum variável
+E21,2,0.0010231382720217723,Hiperparatireoidismo e outros transtornos da glândula paratireóide
+E24,2,0.0010231382720217723,Síndrome de Cushing
+E45,2,0.0010231382720217723,Atraso do desenvolvimento devido à desnutrição protéico-calórica
+E50,2,0.0010231382720217723,Deficiência de vitamina A
+E74,2,0.0010231382720217723,Outros distúrbios do metabolismo de carboidratos
+E75,2,0.0010231382720217723,Distúrbios do metabolismo de esfingolípides e outros distúrbios de depósito de lípides
+E77,2,0.0010231382720217723,Distúrbios do metabolismo de glicoproteínas
+F06,2,0.0010231382720217723,Outros transtornos mentais devidos a lesão e disfunção cerebral e a doença física
+F34,2,0.0010231382720217723,Transtornos de humor [afetivos] persistentes
+F39,2,0.0010231382720217723,Transtorno do humor [afetivo] não especificado
+F42,2,0.0010231382720217723,Transtorno obsessivo-compulsivo
+F91,2,0.0010231382720217723,Distúrbios de conduta
+G47,2,0.0010231382720217723,Distúrbios do sono
+G58,2,0.0010231382720217723,Outras mononeuropatias
+G83,2,0.0010231382720217723,Outras síndromes paralíticas
+J35,2,0.0010231382720217723,Doenças crônicas das amígdalas e das adenóides
+J36,2,0.0010231382720217723,Abscesso periamigdaliano
+J61,2,0.0010231382720217723,Pneumoconiose devida a amianto [asbesto] e outras fibras minerais
+J63,2,0.0010231382720217723,Pneumoconiose devida a outras poeiras inorgânicas
+K11,2,0.0010231382720217723,Doenças das glândulas salivares
+K28,2,0.0010231382720217723,Úlcera gastrojejunal
+K38,2,0.0010231382720217723,Outras doenças do apêndice
+L13,2,0.0010231382720217723,Outras afecções bolhosas
+L26,2,0.0010231382720217723,Dermatite esfoliativa
+L88,2,0.0010231382720217723,Piodermite gangrenosa
+M12,2,0.0010231382720217723,Outras artropatias especificadas
+M15,2,0.0010231382720217723,Poliartrose
+M41,2,0.0010231382720217723,Escoliose
+M43,2,0.0010231382720217723,Outras dorsopatias deformantes
+N14,2,0.0010231382720217723,Afecções tubulares e túbulo-intersticiais induzidas por drogas ou metais pesados
+N36,2,0.0010231382720217723,Outros transtornos da uretra
+N45,2,0.0010231382720217723,Orquite e epididimite
+N62,2,0.0010231382720217723,Hipertrofia da mama
+N63,2,0.0010231382720217723,Nódulo mamário não especificado
+N92,2,0.0010231382720217723,"Menstruação excessiva, freqüente e irregular"
+O23,2,0.0010231382720217723,Infecções do trato geniturinário na gravidez
+O63,2,0.0010231382720217723,Trabalho de parto prolongado
+P10,2,0.0010231382720217723,Laceração intracraniana e hemorragia devidas a traumatismo de parto
+Q04,2,0.0010231382720217723,Outras malformações congênitas do cérebro
+Q05,2,0.0010231382720217723,Espinha bífida
+Q31,2,0.0010231382720217723,Malformações congênitas da laringe
+Q75,2,0.0010231382720217723,Outras malformações congênitas dos ossos do crânio e da face
+R02,2,0.0010231382720217723,Gangrena não classificada em outra parte
+R11,2,0.0010231382720217723,Náusea e vômitos
+R17,2,0.0010231382720217723,Icterícia não especificada
+R22,2,0.0010231382720217723,"Tumefação, massa ou tumoração localizadas da pele e do tecido subcutâneo"
+R27,2,0.0010231382720217723,Outros distúrbios da coordenação
+R91,2,0.0010231382720217723,"Achados anormais, de exames para diagnóstico por imagem, do pulmão"
+V01,2,0.0010231382720217723,Pedestre traumatizado em colisão com um veículo a pedal
+V11,2,0.0010231382720217723,Ciclista traumatizado em colisão com outro veículo a pedal
+V17,2,0.0010231382720217723,Ciclista traumatizado em colisão com um objeto fixo ou parado
+V21,2,0.0010231382720217723,Motociclista traumatizado em colisão com um veículo a pedal
+V63,2,0.0010231382720217723,Ocupante de um veículo de transporte pesado traumatizado em colisão com um automóvel [carro] ou uma caminhonete
+V64,2,0.0010231382720217723,Ocupante de um veículo de transporte pesado traumatizado em colisão com um outro veículo de transporte pesado ou um ônibus
+V67,2,0.0010231382720217723,Ocupante de um veículo de transporte pesado traumatizado em colisão com um objeto fixo ou parado
+V84,2,0.0010231382720217723,Ocupante de um veículo especial a motor de uso essencialmente agrícola traumatizado em um acidente de transporte
+V88,2,0.0010231382720217723,"Acidente não-de-trânsito de tipo especificado, mas sendo desconhecido o modo de transporte da vítima"
+V91,2,0.0010231382720217723,Acidente com embarcação causando outro tipo de traumatismo
+V94,2,0.0010231382720217723,Outros acidentes de transporte por água e os não especificados
+W05,2,0.0010231382720217723,Queda envolvendo uma cadeira de rodas
+W23,2,0.0010231382720217723,"Apertado, colhido, comprimido ou esmagado dentro de ou entre objetos"
+W32,2,0.0010231382720217723,Projétil de revólver
+W38,2,0.0010231382720217723,Explosão ou ruptura de outros aparelhos pressurizados especificados
+W57,2,0.0010231382720217723,"Mordeduras e picadas de inseto e de outros artrópodes, não-venenosos"
+W73,2,0.0010231382720217723,Outros afogamentos e submersão especificados
+W77,2,0.0010231382720217723,"Risco a respiração devido a desmoronamento, queda de terra e de outras substâncias"
+X29,2,0.0010231382720217723,"Contato com animais ou plantas venenosos, sem especificação"
+X32,2,0.0010231382720217723,Exposição à luz solar
+X38,2,0.0010231382720217723,Vítima de inundação
+X48,2,0.0010231382720217723,Envenenamento [intoxicação] acidental por e exposição a pesticidas
+X85,2,0.0010231382720217723,"Agressão por meio de drogas, medicamentos e substâncias biológicas"
+X90,2,0.0010231382720217723,Agressão por meio de produtos químicos e substâncias nocivas não especificados
+Y02,2,0.0010231382720217723,Agressão por meio de projeção ou colocação da vítima diante de um objeto em movimento
+Y07,2,0.0010231382720217723,Outras síndromes de maus tratos
+Y27,2,0.0010231382720217723,"Exposição a vapor de água, gases ou objetos quentes, intenção não determinada"
+Y44,2,0.0010231382720217723,Efeitos adversos de substâncias farmacológicas que atuam primariamente sobre os constituintes do sangue
+Y47,2,0.0010231382720217723,"Efeitos adversos de sedativos, hipnóticos e tranquilizantes [ansiolíticos]"
+Y49,2,0.0010231382720217723,"Efeitos adversos de substâncias psicotrópicas, não classificadas em outra parte"
+Y59,2,0.0010231382720217723,Efeitos adversos de outras vacinas e substâncias biológicas e as não especificadas
+Y74,2,0.0010231382720217723,"Dispositivos (aparelhos) gerais de uso hospitalar ou pessoal, associados a incidentes adversos"
+A07,1,5.115691360108862e-4,Outras doenças intestinais por protozoários
+A24,1,5.115691360108862e-4,Mormo e melioidose
+A32,1,5.115691360108862e-4,Listeriose [listeríase]
+A44,1,5.115691360108862e-4,Bartonelose
+A66,1,5.115691360108862e-4,Bouba
+A69,1,5.115691360108862e-4,Outras infecções por espiroquetas
+A85,1,5.115691360108862e-4,"Outras encefalites virais, não classificadas em outra parte"
+A89,1,5.115691360108862e-4,Infecções virais não especificadas do sistema nervoso central
+B04,1,5.115691360108862e-4,Varíola dos macacos [Monkeypox]
+B27,1,5.115691360108862e-4,Mononucleose infecciosa
+B77,1,5.115691360108862e-4,Ascaridíase
+B83,1,5.115691360108862e-4,Outras helmintíases
+B86,1,5.115691360108862e-4,Escabiose [sarna]
+C63,1,5.115691360108862e-4,Neoplasia maligna de outros órgãos genitais masculinos e dos não especificados
+D10,1,5.115691360108862e-4,Neoplasia benigna da boca e da faringe
+D22,1,5.115691360108862e-4,Nevos melanocíticos
+D23,1,5.115691360108862e-4,Outras neoplasias benignas da pele
+D27,1,5.115691360108862e-4,Neoplasia benigna do ovário
+D28,1,5.115691360108862e-4,Neoplasia benigna de outros órgãos genitais femininos e de órgãos não especificados
+D29,1,5.115691360108862e-4,Neoplasia benigna dos órgãos genitais masculinos
+D31,1,5.115691360108862e-4,Neoplasia benigna do olho e anexos
+E01,1,5.115691360108862e-4,"Transtornos tireoidianos e afecções associadas, relacionados à deficiência de iodo"
+E25,1,5.115691360108862e-4,Transtornos adrenogenitais
+E26,1,5.115691360108862e-4,Hiperaldosteronismo
+E30,1,5.115691360108862e-4,Transtornos da puberdade não classificados em outra parte
+E40,1,5.115691360108862e-4,Kwashiorkor
+E61,1,5.115691360108862e-4,Deficiência de outros elementos nutrientes
+E67,1,5.115691360108862e-4,Outras formas de hiperalimentação
+E68,1,5.115691360108862e-4,Seqüelas de hiperalimentação
+E71,1,5.115691360108862e-4,Distúrbios do metabolismo de aminoácidos de cadeia ramificada e do metabolismo dos ácidos graxos
+E73,1,5.115691360108862e-4,Intolerância à lactose
+F07,1,5.115691360108862e-4,"Transtornos de personalidade e do comportamento devidos a doença, a lesão e a disfunção cerebral"
+F15,1,5.115691360108862e-4,"Transtornos mentais e comportamentais devidos ao uso de outros estimulantes, inclusive a cafeína"
+F28,1,5.115691360108862e-4,Outros transtornos psicóticos não-orgânicos
+F30,1,5.115691360108862e-4,Episódio maníaco
+F43,1,5.115691360108862e-4,"Reações ao ""stress"" grave e transtornos de adaptação"
+F44,1,5.115691360108862e-4,Transtornos dissociativos [de conversão]
+F53,1,5.115691360108862e-4,"Transtornos mentais e comportamentais associados ao puerpério, não classificados em outra parte"
+F55,1,5.115691360108862e-4,Abuso de substâncias que não produzem dependência
+F60,1,5.115691360108862e-4,Transtornos específicos da personalidade
+F89,1,5.115691360108862e-4,Transtorno do desenvolvimento psicológico não especificado
+F92,1,5.115691360108862e-4,Transtornos mistos de conduta e das emoções
+G24,1,5.115691360108862e-4,Distonia
+G50,1,5.115691360108862e-4,Transtornos do nervo trigêmeo
+G64,1,5.115691360108862e-4,Outros transtornos do sistema nervoso periférico
+H05,1,5.115691360108862e-4,Transtornos da órbita
+H60,1,5.115691360108862e-4,Otite externa
+H65,1,5.115691360108862e-4,Otite média não-supurativa
+H81,1,5.115691360108862e-4,Transtornos da função vestibular
+I02,1,5.115691360108862e-4,Coréia reumática
+I78,1,5.115691360108862e-4,Doenças dos capilares
+J14,1,5.115691360108862e-4,Pneumonia devida a Haemophilus infuenzae
+J62,1,5.115691360108862e-4,Pneumoconiose devida a poeira que contenham sílica
+K36,1,5.115691360108862e-4,Outras formas de apendicite
+K58,1,5.115691360108862e-4,Síndrome do cólon irritável
+K91,1,5.115691360108862e-4,"Transtornos do aparelho digestivo pós-procedimentos, não classificados em outra parte"
+L01,1,5.115691360108862e-4,Impetigo
+L05,1,5.115691360108862e-4,Cisto pilonidal
+L21,1,5.115691360108862e-4,Dermatite seborréica
+L27,1,5.115691360108862e-4,Dermatite devida a substâncias de uso interno
+L82,1,5.115691360108862e-4,Ceratose seborréica
+M08,1,5.115691360108862e-4,Artrite juvenil
+M18,1,5.115691360108862e-4,Artrose da primeira articulação carpometacarpiana
+M42,1,5.115691360108862e-4,Osteocondrose da coluna vertebral
+M53,1,5.115691360108862e-4,Outras dorsopatias não classificadas em outra parte
+M54,1,5.115691360108862e-4,Dorsalgia
+M88,1,5.115691360108862e-4,Doença de Paget do osso (osteíte deformante)
+M94,1,5.115691360108862e-4,Outros transtornos das cartilagens
+M99,1,5.115691360108862e-4,Lesões biomecânicas não classificadas em outra parte
+N01,1,5.115691360108862e-4,Síndrome nefrítica rapidamente progressiva
+N07,1,5.115691360108862e-4,Nefropatia hereditária não classificada em outra parte
+N23,1,5.115691360108862e-4,Cólica nefrética não especificada
+N27,1,5.115691360108862e-4,Hipoplasia renal de causa desconhecida
+N60,1,5.115691360108862e-4,Displasias mamárias benignas
+N95,1,5.115691360108862e-4,Transtornos da menopausa e da perimenopausa
+O08,1,5.115691360108862e-4,Complicações conseqüentes a aborto e gravidez ectópica ou molar
+O22,1,5.115691360108862e-4,Complicações venosas na gravidez
+O29,1,5.115691360108862e-4,Complicações de anestesia administrada durante a gravidez
+O30,1,5.115691360108862e-4,Gestação múltipla
+O68,1,5.115691360108862e-4,Trabalho de parto e parto complicados por sofrimento fetal
+O73,1,5.115691360108862e-4,"Retenção da placenta e das membranas, sem hemorragias"
+O74,1,5.115691360108862e-4,Complicações de anestesia durante o trabalho de parto e o parto
+O91,1,5.115691360108862e-4,Infecções mamárias associadas ao parto
+O97,1,5.115691360108862e-4,Morte por seqüelas de causas obstétricas diretas
+P00,1,5.115691360108862e-4,"Feto e recém-nascido afetados por afecções maternas, não obrigatoriamente relacionadas com a gravidez atual"
+P12,1,5.115691360108862e-4,Lesão do couro cabeludo devida a traumatismo de parto
+P57,1,5.115691360108862e-4,Kernicterus
+Q23,1,5.115691360108862e-4,Malformações congênitas das valvas aórtica e mitral
+Q32,1,5.115691360108862e-4,Malformações congênitas da traquéia e dos brônquios
+Q45,1,5.115691360108862e-4,Outras malformações congênitas do aparelho digestivo
+Q50,1,5.115691360108862e-4,"Malformações congênitas dos ovários, das trompas de Falópio e dos ligamentos largos"
+Q52,1,5.115691360108862e-4,Outras malformações congênitas dos órgãos genitais femininos
+Q60,1,5.115691360108862e-4,Agenesia renal e outros defeitos de redução do rim
+Q62,1,5.115691360108862e-4,Anomalias congênitas obstrutivas da pelve renal e malformações congênitas do ureter
+Q63,1,5.115691360108862e-4,Outras malformações congênitas do rim
+Q76,1,5.115691360108862e-4,Malformações congênitas da coluna vertebral e dos ossos do tórax
+Q77,1,5.115691360108862e-4,Osteocondrodisplasia com anomalias de crescimento dos ossos longos e da coluna vertebral
+Q78,1,5.115691360108862e-4,Outras osteocondrodisplasias
+Q93,1,5.115691360108862e-4,"Monossomias e deleções dos autossomos, não classificadas em outra parte"
+Q96,1,5.115691360108862e-4,Síndrome de Turner
+R01,1,5.115691360108862e-4,Sopros e outros ruídos cardíacos
+R14,1,5.115691360108862e-4,Flatulência e afecções correlatas
+R26,1,5.115691360108862e-4,Anormalidades da marcha e da mobilidade
+R29,1,5.115691360108862e-4,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular
+R32,1,5.115691360108862e-4,Incontinência urinária não especificada
+R47,1,5.115691360108862e-4,Distúrbios da fala não classificados em outra parte
+R51,1,5.115691360108862e-4,Cefaléia
+R53,1,5.115691360108862e-4,"Mal estar, fadiga"
+R59,1,5.115691360108862e-4,Aumento de volume dos gânglios linfáticos
+R60,1,5.115691360108862e-4,Edema não classificado em outra parte
+R73,1,5.115691360108862e-4,Aumento da glicemia
+R93,1,5.115691360108862e-4,Achados anormais de exames para diagnóstico por imagem de outras estruturas do corpo
+V06,1,5.115691360108862e-4,Pedestre traumatizado em colisão com outro veículo não-motorizado
+V10,1,5.115691360108862e-4,Ciclista traumatizado em colisão com um pedestre ou um animal
+V37,1,5.115691360108862e-4,Ocupante de um triciclo motorizado traumatizado em colisão com um objeto fixo ou parado
+V41,1,5.115691360108862e-4,Ocupante de um automóvel [carro] traumatizado em colisão com um veículo a pedal
+V46,1,5.115691360108862e-4,Ocupante de um automóvel [carro] traumatizado em colisão com outro veículo não-motorizado
+V50,1,5.115691360108862e-4,Ocupante de uma caminhonete traumatizado em colisão com um pedestre ou um animal
+V56,1,5.115691360108862e-4,Ocupante de uma caminhonete traumatizado em colisão com outro veículo não-motorizado
+V82,1,5.115691360108862e-4,Ocupante de um bonde [carro elétrico] traumatizado em um acidente de transporte
+V83,1,5.115691360108862e-4,Ocupante de um veículo especial a motor usado principalmente em áreas industriais traumatizado em um acidente de transporte
+V93,1,5.115691360108862e-4,"Acidente a bordo de uma embarcação, sem acidente da embarcação e não causando afogamento ou submersão"
+W03,1,5.115691360108862e-4,Outras quedas no mesmo nível por colisão com ou empurrão por outra pessoa
+W12,1,5.115691360108862e-4,Queda em ou de um andaime
+W26,1,5.115691360108862e-4,"Contato com faca, espada e punhal"
+W29,1,5.115691360108862e-4,Contato com outros utensílios manuais e aparelhos domésticos equipados com motor
+W30,1,5.115691360108862e-4,Contato com maquinaria agrícola
+W31,1,5.115691360108862e-4,Contato com outras máquinas e com as não especificadas
+W33,1,5.115691360108862e-4,"Rifle, espingarda e armas de fogo de maior tamanho"
+W36,1,5.115691360108862e-4,Explosão ou ruptura de cilindro de gás
+W39,1,5.115691360108862e-4,Queima de fogos de artifício
+W50,1,5.115691360108862e-4,"Golpe, pancada, pontapé, mordedura ou escoriação infligidos por outra pessoa"
+W64,1,5.115691360108862e-4,Exposição a outras forças mecânicas animadas e às não especificadas
+W81,1,5.115691360108862e-4,Confinado ou aprisionado em um ambiente pobre em oxigênio
+W83,1,5.115691360108862e-4,Outros riscos especificados à respiração
+W90,1,5.115691360108862e-4,Exposição a outros tipos de radiação não-ionizante
+W99,1,5.115691360108862e-4,Exposição a outros fatores ambientais artificiais e aos não especificados
+X01,1,5.115691360108862e-4,Exposição a fogo não-controlado fora de um edifício ou de outro tipo de construção
+X06,1,5.115691360108862e-4,Exposição a combustão de outro tipo de roupa ou de acessórios
+X10,1,5.115691360108862e-4,"Contato com bebidas, alimentos, gordura e óleo de cozinha quentes"
+X17,1,5.115691360108862e-4,"Contato com motores, máquinas e ferramentas quentes"
+X19,1,5.115691360108862e-4,Contato com outras fontes de calor ou com substâncias quentes não especificados
+X22,1,5.115691360108862e-4,Contato com escorpiões
+X25,1,5.115691360108862e-4,Contato com outros artrópodes venenosos
+X46,1,5.115691360108862e-4,Envenenamento [intoxicação] acidental por e exposição a solventes orgânicos e hidrocarbonetos halogenados e seus vapores
+X52,1,5.115691360108862e-4,Estadia prolongada em ambiente agravitacional
+X73,1,5.115691360108862e-4,"Lesão autoprovocada intencionalmente por disparo de espingarda, carabina, ou arma de fogo de maior calibre"
+X89,1,5.115691360108862e-4,Agressão por meio de outros produtos químicos e substâncias nocivas especificados
+X98,1,5.115691360108862e-4,"Agressão por meio de vapor de água, gases ou objetos quentes"
+Y10,1,5.115691360108862e-4,"Envenenamento [intoxicação] por e exposição a analgésicos, antipiréticos e anti-reumáticos não-opiáceos, intenção não determinada"
+Y22,1,5.115691360108862e-4,"Disparo de pistola, intenção não determinada"
+Y31,1,5.115691360108862e-4,"Queda, permanência ou corrida diante de um objeto em movimento, intenção não determinada"
+Y32,1,5.115691360108862e-4,"Impacto de um veículo a motor, intenção não determinada"
+Y42,1,5.115691360108862e-4,"Efeitos adversos de hormônios e seus substitutos sintéticos e antagonistas, não classificados em outra parte"
+Y43,1,5.115691360108862e-4,Efeitos adversos de substâncias de ação primariamente sistêmica
+Y46,1,5.115691360108862e-4,Efeitos adversos de drogas anticonvulsivantes (antiepilépticas) e antiparkinsonianas
+Y52,1,5.115691360108862e-4,Efeitos adversos de substâncias que atuam primariamente sobre o aparelho cardiovascular
+Y54,1,5.115691360108862e-4,"Efeitos adversos de substâncias que atuam primariamente sobre o metabolismo da água, dos sais minerais e do ácido úrico"
+Y56,1,5.115691360108862e-4,"Efeitos adversos de substâncias de uso tópico que atuam primariamente sobre a pele e as membranas mucosas e drogas de uso oftalmológico, otorrinolaringológico e dentário"
+Y69,1,5.115691360108862e-4,Acidente não especificado durante a prestação de cuidado médico e cirúrgico
+Y70,1,5.115691360108862e-4,"Dispositivos (aparelhos) de anestesiologia, associados a incidentes adversos"
+Y73,1,5.115691360108862e-4,"Dispositivos (aparelhos) usados em gastroenterologia e em urologia, associados a incidentes adversos"
+Y81,1,5.115691360108862e-4,"Dispositivos (aparelhos) utilizados em cirurgia geral ou cirurgia plástica, associados a incidente adversos"

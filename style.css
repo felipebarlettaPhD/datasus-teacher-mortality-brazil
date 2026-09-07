@@ -1,0 +1,430 @@
+/* ==========================================================================
+   DATASUS-inspired stylesheet for the teacher mortality project
+   File: style.css
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;600&display=swap");
+
+:root {
+  --datasus-navy: #0B4F6C;
+  --datasus-blue: #0077B6;
+  --datasus-cyan: #00A6D6;
+  --datasus-teal: #00A6A6;
+  --datasus-red: #E85D5D;
+  --datasus-gold: #D89B2B;
+  --datasus-ink: #243746;
+  --datasus-muted: #5D6A72;
+  --datasus-border: #D9E5EC;
+  --datasus-light: #F4F9FC;
+  --datasus-light-blue: #EAF5FB;
+  --datasus-white: #FFFFFF;
+}
+
+/* Page --------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--datasus-ink);
+  background: #F6F8FA;
+}
+
+div.main-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.toc-content {
+  background: var(--datasus-white);
+  padding: 0 42px 45px 42px;
+  box-shadow: 0 4px 20px rgba(26, 66, 86, 0.08);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Header ------------------------------------------------------------------- */
+
+#header {
+  position: relative;
+  margin: 0 0 38px 0;
+  padding: 38px 48px 34px 48px;
+  min-height: 165px;
+  color: var(--datasus-white);
+  background:
+    linear-gradient(
+      115deg,
+      #083B55 0%,
+      var(--datasus-navy) 52%,
+      #087CA7 100%
+    );
+  border-bottom: 5px solid var(--datasus-cyan);
+  box-shadow: 0 5px 14px rgba(11, 79, 108, 0.22);
+}
+
+#header::after {
+  content: "DATASUS · SIM";
+  position: absolute;
+  right: 38px;
+  bottom: 24px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+h1.title {
+  margin: 0 0 8px 0;
+  padding: 0;
+  max-width: 900px;
+  color: var(--datasus-white);
+  font-size: 42px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h3.subtitle {
+  margin: 0 0 12px 0;
+  color: #D9F3FF;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+h4.author,
+h4.date {
+  display: inline-block;
+  margin: 4px 18px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: "Roboto Mono", monospace;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Headings ----------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--datasus-navy);
+  font-weight: 700;
+}
+
+.toc-content h1 {
+  margin-top: 42px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--datasus-cyan);
+  font-size: 32px;
+}
+
+.toc-content h2 {
+  margin-top: 34px;
+  color: var(--datasus-blue);
+  font-size: 24px;
+}
+
+.toc-content h3 {
+  margin-top: 26px;
+  color: #2D6E89;
+  font-size: 19px;
+}
+
+/* TOC ---------------------------------------------------------------------- */
+
+#TOC {
+  background: var(--datasus-white);
+  border: 1px solid var(--datasus-border);
+  border-top: 5px solid var(--datasus-cyan);
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(26, 66, 86, 0.10);
+  padding: 10px 0;
+}
+
+div.tocify {
+  width: 23%;
+  max-width: 340px;
+  max-height: 86%;
+}
+
+.tocify .list-group-item {
+  border: 0;
+  border-radius: 0;
+  color: #45555F;
+  font-size: 13px;
+  line-height: 1.35;
+  padding: 9px 18px;
+}
+
+.tocify .list-group-item:hover {
+  color: var(--datasus-blue);
+  background: var(--datasus-light-blue);
+}
+
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+  color: var(--datasus-navy);
+  font-weight: 700;
+  background: #DDF1FA;
+  border-left: 4px solid var(--datasus-cyan);
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 12px;
+  padding-left: 28px;
+}
+
+/* Text --------------------------------------------------------------------- */
+
+p {
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: var(--datasus-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--datasus-navy);
+  text-decoration: underline;
+}
+
+strong {
+  color: #173E52;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 14px 20px;
+  color: #3E5663;
+  background: #F5FAFD;
+  border-left: 5px solid var(--datasus-cyan);
+}
+
+/* Callout boxes ------------------------------------------------------------ */
+
+.hero-note,
+.objective-box,
+.method-box,
+.warning-box,
+.conclusion-box,
+.footer-note {
+  margin: 22px 0;
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(26, 66, 86, 0.06);
+}
+
+.hero-note {
+  background: linear-gradient(135deg, #EAF7FC 0%, #F7FCFE 100%);
+  border-left: 6px solid var(--datasus-cyan);
+}
+
+.objective-box {
+  background: #EAF5FB;
+  border-left: 6px solid var(--datasus-blue);
+}
+
+.method-box {
+  background: #EEF8F5;
+  border-left: 6px solid var(--datasus-teal);
+}
+
+.warning-box {
+  background: #FFF8E8;
+  border-left: 6px solid var(--datasus-gold);
+}
+
+.conclusion-box {
+  background: #EAF7F5;
+  border-left: 6px solid var(--datasus-teal);
+  font-size: 17px;
+}
+
+.footer-note {
+  background: var(--datasus-navy);
+  color: var(--datasus-white);
+  border-left: 6px solid var(--datasus-cyan);
+}
+
+.footer-note strong {
+  color: var(--datasus-white);
+}
+
+/* Tables ------------------------------------------------------------------- */
+
+.table {
+  margin-top: 14px;
+  margin-bottom: 28px;
+  background: var(--datasus-white);
+  border: 1px solid var(--datasus-border);
+  font-size: 14px;
+}
+
+.table > thead > tr > th {
+  border-bottom: 0;
+  vertical-align: middle;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+  border-top: 1px solid #E8EFF3;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #F6FAFC;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #EAF5FB;
+}
+
+caption {
+  padding: 10px 0 8px 0;
+  color: var(--datasus-navy);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Code --------------------------------------------------------------------- */
+
+pre {
+  margin: 18px 0 25px 0;
+  padding: 16px 18px;
+  overflow-x: auto;
+  background: #F3F6F8;
+  border: 1px solid #DDE6EB;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+code,
+pre code {
+  font-family: "Roboto Mono", Consolas, monospace;
+  font-size: 12.5px;
+}
+
+code {
+  color: #A53B3B;
+  background: #F5F7F8;
+}
+
+.btn.btn-default.btn-xs {
+  color: var(--datasus-navy);
+  background: #EAF5FB;
+  border: 1px solid #C7E2EF;
+  border-radius: 5px;
+}
+
+/* Figures ------------------------------------------------------------------ */
+
+.figure {
+  margin-top: 22px;
+  margin-bottom: 32px;
+}
+
+img {
+  max-width: 100%;
+}
+
+p.caption {
+  color: var(--datasus-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Lists -------------------------------------------------------------------- */
+
+.toc-content ul,
+.toc-content ol {
+  margin-bottom: 18px;
+}
+
+.toc-content li {
+  margin-bottom: 7px;
+}
+
+/* Horizontal rules --------------------------------------------------------- */
+
+hr {
+  margin: 32px 0;
+  border: 0;
+  border-top: 1px solid var(--datasus-border);
+}
+
+/* Responsive layout -------------------------------------------------------- */
+
+@media (max-width: 992px) {
+  .toc-content {
+    padding: 0 24px 35px 24px;
+  }
+
+  #header {
+    padding: 30px 26px;
+  }
+
+  #header::after {
+    display: none;
+  }
+
+  h1.title {
+    font-size: 34px;
+  }
+
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container-fluid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .toc-content {
+    padding: 0 16px 28px 16px;
+  }
+
+  #header {
+    min-height: 0;
+    padding: 24px 20px;
+  }
+
+  h1.title {
+    font-size: 29px;
+  }
+
+  h3.subtitle {
+    font-size: 17px;
+  }
+
+  .toc-content h1 {
+    font-size: 27px;
+  }
+
+  .toc-content h2 {
+    font-size: 21px;
+  }
+}

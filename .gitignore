@@ -47,3 +47,14 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# ============================================================
+# Project-specific files
+# ============================================================
+
+# Processed SIM microdata
+data/*.rds
+data/*.RDS
+
+# Original exploratory R Markdown file
+Professor_Number.Rmd

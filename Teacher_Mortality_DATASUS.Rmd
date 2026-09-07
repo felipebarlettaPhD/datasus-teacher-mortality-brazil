@@ -1,0 +1,1787 @@
+---
+title: "Mortality among teachers in Brazil"
+subtitle: "A descriptive analysis of SIM/DATASUS, 2010–2024"
+author: "Felipe Barletta"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_folding: hide
+    highlight: tango
+    theme: united
+    css: style.css
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = NA,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 10,
+  fig.height = 6,
+  dpi = 160,
+  out.width = "100%"
+)
+
+options(
+  scipen = 999,
+  dplyr.summarise.inform = FALSE
+)
+setwd("~/Documents/DataSus")
+library(microdatasus)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(purrr)
+library(forcats)
+library(readr)
+library(ggplot2)
+library(scales)
+library(kableExtra)
+library(cowplot)
+library(rsvg)
+
+year_start <- 2010
+year_end   <- 2024
+years      <- year_start:year_end
+
+data_directory   <- "data"
+output_directory <- "results"
+figure_directory <- file.path(output_directory, "figures")
+
+dir.create(data_directory, showWarnings = FALSE, recursive = TRUE)
+dir.create(output_directory, showWarnings = FALSE, recursive = TRUE)
+dir.create(figure_directory, showWarnings = FALSE, recursive = TRUE)
+
+# DATASUS-inspired plotting palette.
+col_navy   <- "#0B4F6C"
+col_blue   <- "#0077B6"
+col_teal   <- "#00A6A6"
+col_red    <- "#E85D5D"
+col_gold   <- "#D89B2B"
+col_grey   <- "#6C757D"
+col_light  <- "#F4F9FC"
+
+theme_datasus <- function(base_size = 12) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      plot.title = element_text(
+        face = "bold",
+        size = base_size + 3,
+        color = col_navy,
+        margin = margin(b = 6)
+      ),
+      plot.subtitle = element_text(
+        size = base_size,
+        color = "#45555F",
+        margin = margin(b = 10)
+      ),
+      plot.caption = element_text(
+        size = base_size - 3,
+        color = "#5D6A72",
+        hjust = 0,
+        lineheight = 1.2,
+        margin = margin(t = 10)
+      ),
+      axis.title = element_text(
+        face = "bold",
+        color = "#334E5C"
+      ),
+      axis.text = element_text(
+        color = "#45555F"
+      ),
+      panel.grid.minor = element_blank(),
+      panel.grid.major = element_line(
+        color = "#E5EDF2",
+        linewidth = 0.4
+      ),
+      legend.position = "top",
+      legend.title = element_blank(),
+      plot.margin = margin(10, 12, 10, 10)
+    )
+}
+
+datasus_kable <- function(data, caption = NULL, digits = 1) {
+  data %>%
+    kbl(
+      format = "html",
+      caption = caption,
+      digits = digits,
+      escape = TRUE,
+      align = "l"
+    ) %>%
+    kable_styling(
+      bootstrap_options = c(
+        "striped",
+        "hover",
+        "condensed",
+        "responsive"
+      ),
+      full_width = TRUE,
+      position = "center"
+    ) %>%
+    row_spec(
+      0,
+      bold = TRUE,
+      color = "white",
+      background = col_navy
+    )
+}
+```
+
+# DATASUS and health data in Brazil
+
+<div class="hero-note">
+<strong>Why DATASUS matters.</strong> Brazil's Department of Information and Informatics of the Unified Health System (DATASUS) is part of the Ministry of Health and supports the development, maintenance, operation, integration and dissemination of national health information systems. These systems are central to health surveillance, planning, management and research.
+</div>
+
+DATASUS was created in 1991 and today supports a broad ecosystem of national health-information systems and digital platforms. For researchers, its importance lies in the availability of large, routinely collected administrative and epidemiological datasets that cover different stages of healthcare and vital events.
+
+Examples of information available through the Brazilian Ministry of Health and DATASUS include:
+
+```{r datasus-systems-table, echo=FALSE}
+datasus_systems <-
+  tibble(
+    System = c(
+      "SIM",
+      "SINASC",
+      "SIH/SUS",
+      "SIA/SUS",
+      "CNES"
+    ),
+    `Main information` = c(
+      "Deaths and underlying causes of death",
+      "Live births and maternal/newborn characteristics",
+      "Hospital admissions financed by the SUS",
+      "Outpatient procedures financed by the SUS",
+      "Health establishments, services and workforce"
+    ),
+    `Example use` = c(
+      "Mortality and cause-of-death analyses",
+      "Maternal and child health research",
+      "Hospital utilization and outcomes",
+      "Outpatient care and procedure monitoring",
+      "Health-service capacity and infrastructure"
+    )
+  )
+
+datasus_kable(
+  datasus_systems,
+  caption = "Selected Brazilian health information systems"
+)
+```
+
+This project focuses on the **Sistema de Informações sobre Mortalidade (SIM)**. SIM was developed by the Ministry of Health in 1975 and is based on information recorded on the **Declaração de Óbito (Death Certificate)**. The system contains variables that allow mortality patterns and underlying causes of death to be studied across Brazil.
+
+Official information:
+
+- [DATASUS — Brazilian Ministry of Health](https://www.gov.br/saude/pt-br/composicao/seidigi/datasus/datasus)
+- [Sistema de Informações sobre Mortalidade (SIM)](https://www.gov.br/saude/pt-br/composicao/svsa/sistemas-de-informacao/sim)
+- [Open Health Data — SIM](https://dadosabertos.saude.gov.br/dataset/sim)
+
+## From DATASUS to the research question
+
+SIM contains information on the date of death, age, sex, race/skin color, municipality of residence, occupation and underlying cause of death, among other fields. The combination of **occupation (CBO)** and **underlying cause of death (ICD-10)** makes it possible to describe mortality among people whose occupation was recorded as a teaching occupation.
+
+<div class="objective-box">
+<strong>Project objective.</strong> To describe deaths among teachers recorded in the Brazilian Mortality Information System between 2010 and 2024, characterize their demographic and cause-of-death profiles, and examine the temporal pattern of suicide and homicide.
+</div>
+
+This is a **descriptive mortality analysis**. The results are counts and proportions among deaths recorded in SIM; they are **not mortality rates**, because the analysis does not use the number of teachers in the Brazilian population as a denominator.
+
+# Data and cohort definition
+
+## Study period and variables
+
+The study covers **2010–2024**. Only variables required for the analysis are downloaded to reduce memory use.
+
+```{r variable-dictionary, echo=FALSE}
+variable_dictionary <-
+  tibble(
+    Variable = c(
+      "DTOBITO",
+      "OCUP",
+      "CAUSABAS",
+      "SEXO",
+      "IDADE",
+      "RACACOR",
+      "CODMUNRES"
+    ),
+    Description = c(
+      "Date of death",
+      "Occupation according to the Brazilian Classification of Occupations (CBO)",
+      "Underlying cause of death according to ICD-10",
+      "Sex recorded on the death certificate",
+      "Age at death",
+      "Race/skin color",
+      "Municipality of residence"
+    )
+  )
+
+datasus_kable(
+  variable_dictionary,
+  caption = "SIM variables used in this project"
+)
+```
+
+## Who is considered a teacher?
+
+The operational definition identifies records whose processed CBO occupation description contains the Portuguese root **“professor”**. The original CBO code is retained for auditing.
+
+<div class="method-box">
+<strong>Population represented in this project.</strong> The resulting dataset includes teaching occupations across different educational levels, from early-childhood and basic education to vocational education, free courses and higher education, including university professors. The SIM occupation field used here does <strong>not</strong> distinguish public-sector from private-sector employment. Therefore, the analysis should not be interpreted as referring only to public-school teachers.
+</div>
+
+Occupation in SIM is the occupation reported on the death certificate. It should not be interpreted as a complete employment history or proof that the person was actively employed in that occupation at the time of death.
+
+# Reproducible data pipeline
+
+## Packages
+
+The analysis uses `microdatasus` to obtain and process SIM microdata. If the required packages are not installed, the following installation chunk can be run once.
+
+```{r install-packages, eval=FALSE}
+# Install CRAN packages only if needed.
+install.packages(
+  c(
+    "dplyr",
+    "tidyr",
+    "stringr",
+    "purrr",
+    "forcats",
+    "readr",
+    "ggplot2",
+    "scales",
+    "kableExtra",
+    "cowplot",
+    "rsvg",
+    "remotes"
+  )
+)
+
+# Install microdatasus from GitHub if necessary.
+remotes::install_github(
+  "rfsaldanha/microdatasus"
+)
+```
+
+## ICD-10 category labels
+
+The three-character ICD-10 descriptions used in the tables are imported separately.
+
+```{r icd-lookup}
+# Import an ICD-10 category lookup table.
+icd10_url <-
+  paste0(
+    "https://raw.githubusercontent.com/",
+    "LaCAfe/AEventPT-br/master/",
+    "iii%20-%20CID-10-Diseases/",
+    "CID-10-CATEGORIAS.CSV"
+  )
+
+icd10_categories <-
+  readr::read_delim(
+    icd10_url,
+    delim = ";",
+    locale = readr::locale(encoding = "UTF-8"),
+    show_col_types = FALSE,
+    trim_ws = TRUE
+  ) %>%
+  transmute(
+    icd10_3 = str_to_upper(str_trim(CAT)),
+    cause_description = str_trim(DESCRICAO)
+  ) %>%
+  distinct(
+    icd10_3,
+    .keep_all = TRUE
+  )
+```
+
+## Download SIM and identify teachers
+
+To avoid holding the complete national SIM database for all 15 years in memory, each year is downloaded, processed and filtered separately. Only teacher records are retained before the next year is processed.
+
+```{r download-data}
+sim_variables <-
+  c(
+    "DTOBITO",
+    "OCUP",
+    "CAUSABAS",
+    "SEXO",
+    "IDADE",
+    "RACACOR",
+    "CODMUNRES"
+  )
+
+download_teacher_deaths <-
+  function(year) {
+
+    message(
+      "Downloading and processing SIM data for ",
+      year,
+      "..."
+    )
+
+    sim_raw <-
+      fetch_datasus(
+        year_start = year,
+        year_end = year,
+        uf = "all",
+        information_system = "SIM-DO",
+        vars = sim_variables,
+        stop_on_error = TRUE,
+        timeout = 600,
+        quiet = FALSE
+      )
+
+    # Preserve the original CBO code before process_sim() converts
+    # occupation codes to occupation descriptions.
+    sim_raw <-
+      sim_raw %>%
+      mutate(
+        OCUP_CODE =
+          as.character(
+            OCUP
+          )
+      )
+
+    sim_processed <-
+      process_sim(
+        sim_raw,
+        municipality_data = FALSE
+      )
+
+    teachers_year <-
+      sim_processed %>%
+      filter(
+        !is.na(
+          OCUP
+        )
+      ) %>%
+      filter(
+        str_detect(
+          str_to_lower(
+            as.character(
+              OCUP
+            )
+          ),
+          "professor"
+        )
+      ) %>%
+      mutate(
+        YEAR = year
+      )
+
+    rm(
+      sim_raw,
+      sim_processed
+    )
+
+    gc()
+
+    teachers_year
+  }
+
+teacher_rds <-
+  file.path(
+    data_directory,
+    "teacher_deaths_SIM_2010_2024.rds"
+  )
+
+if (file.exists(teacher_rds)) {
+
+  teacher_deaths <-
+    readRDS(
+      teacher_rds
+    )
+
+} else {
+
+  teacher_deaths <-
+    purrr::map_dfr(
+      years,
+      download_teacher_deaths
+    )
+
+  saveRDS(
+    teacher_deaths,
+    teacher_rds,
+    compress = TRUE
+  )
+}
+```
+
+## Create analysis variables
+
+```{r create-variables}
+teacher_deaths <-
+  teacher_deaths %>%
+  mutate(
+    death_date =
+      as.Date(
+        DTOBITO,
+        format = "%Y-%m-%d"
+      ),
+
+    death_year =
+      as.integer(
+        format(
+          death_date,
+          "%Y"
+        )
+      ),
+
+    age =
+      suppressWarnings(
+        as.numeric(
+          IDADEanos
+        )
+      ),
+
+    underlying_cause =
+      str_to_upper(
+        str_trim(
+          as.character(
+            CAUSABAS
+          )
+        )
+      ),
+
+    icd10_3 =
+      str_sub(
+        underlying_cause,
+        1,
+        3
+      ),
+
+    icd10_letter =
+      str_sub(
+        underlying_cause,
+        1,
+        1
+      ),
+
+    age_group =
+      cut(
+        age,
+        breaks =
+          c(
+            -Inf,
+            29,
+            39,
+            49,
+            59,
+            69,
+            79,
+            Inf
+          ),
+        labels =
+          c(
+            "<30",
+            "30–39",
+            "40–49",
+            "50–59",
+            "60–69",
+            "70–79",
+            "80+"
+          ),
+        right = TRUE
+      )
+  )
+```
+
+# Data quality and cohort profile
+
+## Basic quality checks
+
+```{r quality-checks}
+year_inconsistencies <-
+  teacher_deaths %>%
+  filter(
+    !is.na(
+      YEAR
+    ),
+    !is.na(
+      death_year
+    ),
+    YEAR != death_year
+  )
+
+quality_summary <-
+  tibble(
+    Indicator =
+      c(
+        "Study period",
+        "Teacher deaths",
+        "Unique CBO occupation codes",
+        "Unique ICD-10 three-character categories",
+        "YEAR / death-date inconsistencies",
+        "Missing death date",
+        "Missing age",
+        "Missing underlying cause"
+      ),
+
+    Value =
+      c(
+        paste0(
+          year_start,
+          "–",
+          year_end
+        ),
+        scales::comma(
+          nrow(
+            teacher_deaths
+          )
+        ),
+        scales::comma(
+          n_distinct(
+            teacher_deaths$OCUP_CODE
+          )
+        ),
+        scales::comma(
+          n_distinct(
+            teacher_deaths$icd10_3
+          )
+        ),
+        scales::comma(
+          nrow(
+            year_inconsistencies
+          )
+        ),
+        scales::comma(
+          sum(
+            is.na(
+              teacher_deaths$death_date
+            )
+          )
+        ),
+        scales::comma(
+          sum(
+            is.na(
+              teacher_deaths$age
+            )
+          )
+        ),
+        scales::comma(
+          sum(
+            is.na(
+              teacher_deaths$underlying_cause
+            ) |
+              teacher_deaths$underlying_cause == ""
+          )
+        )
+      )
+  )
+
+datasus_kable(
+  quality_summary,
+  caption = "Data-quality and cohort summary"
+)
+```
+
+The analytical dataset contains **`r scales::comma(nrow(teacher_deaths))` deaths** in which the recorded occupation matched the broad teacher definition.
+
+## Which teaching occupations were identified?
+
+```{r occupations}
+teacher_occupations <-
+  teacher_deaths %>%
+  count(
+    OCUP_CODE,
+    OCUP,
+    sort = TRUE,
+    name = "Deaths"
+  ) %>%
+  mutate(
+    Percentage =
+      100 *
+      Deaths /
+      sum(
+        Deaths
+      )
+  )
+
+teacher_occupations %>%
+  slice_head(
+    n = 15
+  ) %>%
+  mutate(
+    Percentage =
+      sprintf(
+        "%.2f%%",
+        Percentage
+      )
+  ) %>%
+  datasus_kable(
+    caption = "Fifteen most frequent teaching occupations recorded in SIM"
+  )
+```
+
+The occupation audit confirms that this is not a dataset restricted to basic education. It contains CBO descriptions spanning early-childhood education, primary and secondary education, vocational teaching, free courses and several higher-education occupations. The full occupation table is exported at the end of the analysis.
+
+# Demographic profile
+
+## Sex
+
+```{r sex-table}
+deaths_by_sex <-
+  teacher_deaths %>%
+  count(
+    SEXO,
+    sort = TRUE,
+    name = "Deaths"
+  ) %>%
+  mutate(
+    Percentage =
+      100 *
+      Deaths /
+      sum(
+        Deaths
+      )
+  )
+
+deaths_by_sex %>%
+  mutate(
+    Percentage =
+      sprintf(
+        "%.1f%%",
+        Percentage
+      )
+  ) %>%
+  datasus_kable(
+    caption = "Deaths by sex"
+  )
+```
+
+## Age at death
+
+```{r age-summary}
+age_summary <-
+  teacher_deaths %>%
+  summarise(
+    `Valid ages` =
+      sum(
+        !is.na(
+          age
+        )
+      ),
+    Mean =
+      mean(
+        age,
+        na.rm = TRUE
+      ),
+    SD =
+      sd(
+        age,
+        na.rm = TRUE
+      ),
+    Median =
+      median(
+        age,
+        na.rm = TRUE
+      ),
+    Q1 =
+      quantile(
+        age,
+        0.25,
+        na.rm = TRUE
+      ),
+    Q3 =
+      quantile(
+        age,
+        0.75,
+        na.rm = TRUE
+      ),
+    Minimum =
+      min(
+        age,
+        na.rm = TRUE
+      ),
+    Maximum =
+      max(
+        age,
+        na.rm = TRUE
+      )
+  )
+
+datasus_kable(
+  age_summary,
+  caption = "Age-at-death summary",
+  digits = 1
+)
+```
+
+```{r age-plot, fig.height=5.5}
+deaths_by_age_group <-
+  teacher_deaths %>%
+  filter(
+    !is.na(
+      age_group
+    )
+  ) %>%
+  count(
+    age_group,
+    name = "Deaths"
+  ) %>%
+  mutate(
+    Percentage =
+      100 *
+      Deaths /
+      sum(
+        Deaths
+      )
+  )
+
+plot_age_groups <-
+  ggplot(
+    deaths_by_age_group,
+    aes(
+      x = age_group,
+      y = Deaths
+    )
+  ) +
+  geom_col(
+    fill = col_blue,
+    width = 0.72
+  ) +
+  geom_text(
+    aes(
+      label =
+        paste0(
+          scales::comma(
+            Deaths
+          ),
+          "\n(",
+          sprintf(
+            "%.1f",
+            Percentage
+          ),
+          "%)"
+        )
+    ),
+    vjust = -0.25,
+    size = 3.4,
+    color = "#334E5C"
+  ) +
+  scale_y_continuous(
+    labels = scales::comma,
+    expand =
+      expansion(
+        mult =
+          c(
+            0,
+            0.12
+          )
+      )
+  ) +
+  labs(
+    title = "Age distribution of deaths among teachers",
+    subtitle = "Brazil, 2010–2024",
+    x = "Age group",
+    y = "Number of deaths",
+    caption = "Source: Brazilian Mortality Information System (SIM/DATASUS)"
+  ) +
+  theme_datasus() +
+  theme(
+    panel.grid.major.x =
+      element_blank()
+  )
+
+plot_age_groups
+```
+
+# Mortality over time
+
+```{r deaths-over-time}
+deaths_by_year <-
+  teacher_deaths %>%
+  count(
+    death_year,
+    name = "Deaths"
+  ) %>%
+  arrange(
+    death_year
+  )
+
+plot_deaths_over_time <-
+  ggplot(
+    deaths_by_year,
+    aes(
+      x = death_year,
+      y = Deaths
+    )
+  ) +
+  geom_line(
+    linewidth = 1.1,
+    color = col_blue
+  ) +
+  geom_point(
+    size = 2.6,
+    color = col_blue
+  ) +
+  scale_x_continuous(
+    breaks = years
+  ) +
+  scale_y_continuous(
+    labels = scales::comma,
+    expand =
+      expansion(
+        mult =
+          c(
+            0.03,
+            0.08
+          )
+      )
+  ) +
+  labs(
+    title = "Deaths among teachers recorded in SIM",
+    subtitle = "Annual number of deaths, Brazil, 2010–2024",
+    x = "Year",
+    y = "Number of deaths",
+    caption = paste0(
+      "These are counts among deaths with a teaching occupation recorded in SIM; ",
+      "they are not population mortality rates.\n",
+      "Source: Brazilian Mortality Information System (SIM/DATASUS)"
+    )
+  ) +
+  theme_datasus() +
+  theme(
+    axis.text.x =
+      element_text(
+        angle = 45,
+        hjust = 1
+      )
+  )
+
+plot_deaths_over_time
+```
+
+The time series should be interpreted primarily as a description of the SIM records selected by the occupational definition. Changes over time may reflect demographic composition, mortality shocks, changes in the number of teachers, occupation recording and other factors; the plot alone does not establish causal explanations.
+
+# Underlying causes of death
+
+## Most frequent ICD-10 categories
+
+```{r top-causes-table}
+deaths_by_icd10_3 <-
+  teacher_deaths %>%
+  filter(
+    !is.na(
+      icd10_3
+    ),
+    icd10_3 != ""
+  ) %>%
+  count(
+    icd10_3,
+    sort = TRUE,
+    name = "Deaths"
+  ) %>%
+  mutate(
+    Percentage =
+      100 *
+      Deaths /
+      sum(
+        Deaths
+      )
+  ) %>%
+  left_join(
+    icd10_categories,
+    by = "icd10_3"
+  )
+
+deaths_by_icd10_3 %>%
+  slice_head(
+    n = 15
+  ) %>%
+  transmute(
+    `ICD-10` = icd10_3,
+    Cause = cause_description,
+    Deaths,
+    Percentage =
+      sprintf(
+        "%.2f%%",
+        Percentage
+      )
+  ) %>%
+  datasus_kable(
+    caption = "Fifteen most frequent three-character ICD-10 categories"
+  )
+```
+
+```{r top-causes-plot, fig.height=7}
+top15_causes_plot <-
+  deaths_by_icd10_3 %>%
+  slice_head(
+    n = 15
+  ) %>%
+  mutate(
+    Label =
+      if_else(
+        is.na(
+          cause_description
+        ),
+        icd10_3,
+        paste0(
+          icd10_3,
+          " — ",
+          cause_description
+        )
+      ),
+    Label =
+      fct_reorder(
+        Label,
+        Deaths
+      )
+  )
+
+plot_top_causes <-
+  ggplot(
+    top15_causes_plot,
+    aes(
+      x = Label,
+      y = Deaths
+    )
+  ) +
+  geom_col(
+    fill = col_blue,
+    width = 0.72
+  ) +
+  coord_flip() +
+  scale_y_continuous(
+    labels = scales::comma,
+    expand =
+      expansion(
+        mult =
+          c(
+            0,
+            0.08
+          )
+      )
+  ) +
+  labs(
+    title = "Leading underlying causes of death among teachers",
+    subtitle = "Top 15 three-character ICD-10 categories, Brazil, 2010–2024",
+    x = NULL,
+    y = "Number of deaths",
+    caption = "Source: Brazilian Mortality Information System (SIM/DATASUS)"
+  ) +
+  theme_datasus() +
+  theme(
+    panel.grid.major.y =
+      element_blank()
+  )
+
+plot_top_causes
+```
+
+# External causes and intentional violence
+
+## Classification
+
+The analysis next focuses on ICD-10 Chapter XX, which contains external causes of morbidity and mortality. The categories used here are mutually exclusive.
+
+```{r external-classification}
+teacher_deaths <-
+  teacher_deaths %>%
+  mutate(
+    external_cause_category =
+      case_when(
+        str_detect(
+          icd10_3,
+          "^V"
+        ) ~
+          "Transport accidents",
+
+        icd10_3 >= "W00" &
+          icd10_3 <= "W19" ~
+          "Falls",
+
+        icd10_3 >= "W65" &
+          icd10_3 <= "W74" ~
+          "Drowning",
+
+        icd10_3 >= "X40" &
+          icd10_3 <= "X49" ~
+          "Accidental poisoning",
+
+        icd10_3 >= "X60" &
+          icd10_3 <= "X84" ~
+          "Suicide",
+
+        (
+          icd10_3 >= "X85" &
+            icd10_3 <= "X99"
+        ) |
+          (
+            icd10_3 >= "Y00" &
+              icd10_3 <= "Y09"
+          ) ~
+          "Homicide",
+
+        icd10_3 >= "Y10" &
+          icd10_3 <= "Y34" ~
+          "Undetermined intent",
+
+        str_detect(
+          underlying_cause,
+          "^[VWXY]"
+        ) ~
+          "Other external causes",
+
+        TRUE ~
+          NA_character_
+      )
+  )
+
+external_cause_summary <-
+  teacher_deaths %>%
+  filter(
+    !is.na(
+      external_cause_category
+    )
+  ) %>%
+  count(
+    external_cause_category,
+    name = "Deaths"
+  ) %>%
+  mutate(
+    `Percentage of external causes` =
+      100 *
+      Deaths /
+      sum(
+        Deaths
+      ),
+    `Percentage of all teacher deaths` =
+      100 *
+      Deaths /
+      nrow(
+        teacher_deaths
+      )
+  ) %>%
+  arrange(
+    desc(
+      Deaths
+    )
+  )
+
+external_cause_summary %>%
+  mutate(
+    `Percentage of external causes` =
+      sprintf(
+        "%.1f%%",
+        `Percentage of external causes`
+      ),
+    `Percentage of all teacher deaths` =
+      sprintf(
+        "%.2f%%",
+        `Percentage of all teacher deaths`
+      )
+  ) %>%
+  datasus_kable(
+    caption = "External causes of death among teachers"
+  )
+```
+
+```{r external-causes-plot, fig.height=6}
+plot_external_causes <-
+  external_cause_summary %>%
+  mutate(
+    external_cause_category =
+      fct_reorder(
+        external_cause_category,
+        Deaths
+      )
+  ) %>%
+  ggplot(
+    aes(
+      x = external_cause_category,
+      y = Deaths
+    )
+  ) +
+  geom_col(
+    fill = col_gold,
+    width = 0.72
+  ) +
+  coord_flip() +
+  geom_text(
+    aes(
+      label =
+        scales::comma(
+          Deaths
+        )
+    ),
+    hjust = -0.12,
+    size = 3.5,
+    color = "#334E5C"
+  ) +
+  scale_y_continuous(
+    labels = scales::comma,
+    expand =
+      expansion(
+        mult =
+          c(
+            0,
+            0.15
+          )
+      )
+  ) +
+  labs(
+    title = "External causes of death among teachers",
+    subtitle = "Brazil, 2010–2024",
+    x = NULL,
+    y = "Number of deaths",
+    caption = "Source: Brazilian Mortality Information System (SIM/DATASUS)"
+  ) +
+  theme_datasus() +
+  theme(
+    panel.grid.major.y =
+      element_blank()
+  )
+
+plot_external_causes
+```
+
+<div class="warning-box">
+<strong>Important distinction.</strong> Suicide is defined as ICD-10 X60–X84 and homicide/assault as X85–Y09. Events of undetermined intent (Y10–Y34) remain separate. Female homicide victims can be identified in SIM, but <strong>femicide cannot be established from the underlying ICD-10 cause alone</strong> because the legal and contextual information required to classify a homicide as femicide is not contained in this field.
+</div>
+
+# Suicide and homicide among teachers
+
+## Overall magnitude
+
+For the final analysis, **intentional violent deaths** are defined as suicide + homicide only.
+
+```{r intentional-violent-summary}
+intentional_violent_deaths <-
+  teacher_deaths %>%
+  filter(
+    external_cause_category %in%
+      c(
+        "Suicide",
+        "Homicide"
+      )
+  ) %>%
+  count(
+    external_cause_category,
+    name = "Deaths"
+  ) %>%
+  mutate(
+    Percentage =
+      100 *
+      Deaths /
+      sum(
+        Deaths
+      )
+  )
+
+intentional_violent_deaths %>%
+  mutate(
+    Percentage =
+      sprintf(
+        "%.1f%%",
+        Percentage
+      )
+  ) %>%
+  datasus_kable(
+    caption = "Intentional violent deaths among teachers, 2010–2024"
+  )
+```
+
+```{r violent-annual-data}
+suicide_homicide_year <-
+  teacher_deaths %>%
+  filter(
+    external_cause_category %in%
+      c(
+        "Suicide",
+        "Homicide"
+      )
+  ) %>%
+  count(
+    death_year,
+    external_cause_category,
+    name = "deaths"
+  ) %>%
+  tidyr::complete(
+    death_year = years,
+    external_cause_category =
+      c(
+        "Suicide",
+        "Homicide"
+      ),
+    fill =
+      list(
+        deaths = 0
+      )
+  ) %>%
+  group_by(
+    death_year
+  ) %>%
+  mutate(
+    total_intentional_violent =
+      sum(
+        deaths
+      ),
+    percentage =
+      100 *
+      deaths /
+      total_intentional_violent
+  ) %>%
+  ungroup()
+
+suicide_homicide_total <-
+  suicide_homicide_year %>%
+  group_by(
+    external_cause_category
+  ) %>%
+  summarise(
+    deaths =
+      sum(
+        deaths
+      ),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    percentage =
+      100 *
+      deaths /
+      sum(
+        deaths
+      )
+  )
+
+total_suicide <-
+  suicide_homicide_total %>%
+  filter(
+    external_cause_category == "Suicide"
+  )
+
+total_homicide <-
+  suicide_homicide_total %>%
+  filter(
+    external_cause_category == "Homicide"
+  )
+
+total_violent <-
+  sum(
+    suicide_homicide_total$deaths
+  )
+
+summary_text <-
+  paste0(
+    year_start,
+    "–",
+    year_end,
+    " total: ",
+    scales::comma(
+      total_violent
+    ),
+    " intentional violent deaths | ",
+    "Suicide: ",
+    scales::comma(
+      total_suicide$deaths
+    ),
+    " (",
+    sprintf(
+      "%.1f",
+      total_suicide$percentage
+    ),
+    "%) | ",
+    "Homicide: ",
+    scales::comma(
+      total_homicide$deaths
+    ),
+    " (",
+    sprintf(
+      "%.1f",
+      total_homicide$percentage
+    ),
+    "%)"
+  )
+```
+
+## Contact icons for the final figures
+
+```{r contact-icons}
+dir.create(
+  "icons",
+  showWarnings = FALSE
+)
+
+if (!file.exists(
+  "icons/gmail.svg"
+)) {
+  download.file(
+    url = "https://cdn.simpleicons.org/gmail/EA4335",
+    destfile = "icons/gmail.svg",
+    mode = "wb"
+  )
+}
+
+if (!file.exists(
+  "icons/whatsapp.svg"
+)) {
+  download.file(
+    url = "https://cdn.simpleicons.org/whatsapp/25D366",
+    destfile = "icons/whatsapp.svg",
+    mode = "wb"
+  )
+}
+
+if (!file.exists(
+  "icons/gmail.png"
+)) {
+  rsvg_png(
+    "icons/gmail.svg",
+    "icons/gmail.png",
+    width = 100,
+    height = 100
+  )
+}
+
+if (!file.exists(
+  "icons/whatsapp.png"
+)) {
+  rsvg_png(
+    "icons/whatsapp.svg",
+    "icons/whatsapp.png",
+    width = 100,
+    height = 100
+  )
+}
+```
+
+## Annual absolute number of suicide and homicide deaths
+
+```{r violent-annual-absolute, fig.width=12, fig.height=7.2}
+plot_main_absolute <-
+  ggplot(
+    suicide_homicide_year,
+    aes(
+      x = death_year,
+      y = deaths,
+      color = external_cause_category,
+      group = external_cause_category
+    )
+  ) +
+  geom_line(
+    linewidth = 1.15
+  ) +
+  geom_point(
+    size = 2.5
+  ) +
+  scale_color_manual(
+    values =
+      c(
+        "Homicide" = col_red,
+        "Suicide" = col_teal
+      )
+  ) +
+  scale_x_continuous(
+    breaks = years
+  ) +
+  scale_y_continuous(
+    labels = scales::comma,
+    expand =
+      expansion(
+        mult =
+          c(
+            0.02,
+            0.08
+          )
+      )
+  ) +
+  labs(
+    title = "Suicide and homicide deaths among teachers",
+    subtitle = "Annual absolute number of deaths, Brazil, 2010–2024",
+    x = "Year",
+    y = "Number of deaths",
+    caption =
+      paste0(
+        summary_text,
+        "\n",
+        "Source: Brazilian Mortality Information System (SIM/DATASUS)"
+      )
+  ) +
+  theme_datasus(
+    base_size = 13
+  ) +
+  theme(
+    axis.text.x =
+      element_text(
+        angle = 45,
+        hjust = 1
+      ),
+    plot.margin =
+      margin(
+        t = 10,
+        r = 10,
+        b = 0,
+        l = 10
+      )
+  )
+
+contact_footer_absolute <-
+  cowplot::ggdraw() +
+  cowplot::draw_label(
+    "Analysis and interpretation: Felipe Barletta",
+    x = 0.01,
+    y = 0.50,
+    hjust = 0,
+    vjust = 0.5,
+    size = 9
+  ) +
+  cowplot::draw_image(
+    "icons/gmail.png",
+    x = 0.39,
+    y = 0.34,
+    width = 0.025,
+    height = 0.32
+  ) +
+  cowplot::draw_label(
+    "felipe.e.barletta@gmail.com",
+    x = 0.42,
+    y = 0.50,
+    hjust = 0,
+    vjust = 0.5,
+    size = 9
+  ) +
+  cowplot::draw_label(
+    "|",
+    x = 0.675,
+    y = 0.50,
+    hjust = 0.5,
+    vjust = 0.5,
+    size = 9
+  ) +
+  cowplot::draw_image(
+    "icons/whatsapp.png",
+    x = 0.70,
+    y = 0.34,
+    width = 0.025,
+    height = 0.32
+  ) +
+  cowplot::draw_label(
+    "+351 910 678 043",
+    x = 0.73,
+    y = 0.50,
+    hjust = 0,
+    vjust = 0.5,
+    size = 9
+  )
+
+plot_violent_annual_absolute <-
+  cowplot::plot_grid(
+    plot_main_absolute,
+    contact_footer_absolute,
+    ncol = 1,
+    rel_heights =
+      c(
+        1,
+        0.075
+      ),
+    align = "v",
+    axis = "lr"
+  )
+
+plot_violent_annual_absolute
+```
+
+## Annual proportion among intentional violent deaths
+
+```{r violent-annual-percentage, fig.width=12, fig.height=7.2}
+plot_main_percentage <-
+  ggplot(
+    suicide_homicide_year,
+    aes(
+      x = death_year,
+      y = percentage,
+      color = external_cause_category,
+      group = external_cause_category
+    )
+  ) +
+  geom_hline(
+    yintercept = 50,
+    linetype = "dashed",
+    linewidth = 0.55,
+    color = "#45555F"
+  ) +
+  geom_line(
+    linewidth = 1.15
+  ) +
+  geom_point(
+    size = 2.5
+  ) +
+  scale_color_manual(
+    values =
+      c(
+        "Homicide" = col_red,
+        "Suicide" = col_teal
+      )
+  ) +
+  scale_x_continuous(
+    breaks = years
+  ) +
+  scale_y_continuous(
+    limits =
+      c(
+        0,
+        100
+      ),
+    breaks =
+      seq(
+        0,
+        100,
+        by = 20
+      ),
+    labels =
+      function(x)
+        paste0(
+          x,
+          "%"
+        )
+  ) +
+  labs(
+    title = "Distribution of intentional violent deaths among teachers",
+    subtitle = "Annual proportion of suicide and homicide deaths, Brazil, 2010–2024",
+    x = "Year",
+    y = "Percentage of intentional violent deaths",
+    caption =
+      paste0(
+        summary_text,
+        "\n",
+        "Percentages are calculated within suicide + homicide deaths in each year.",
+        "\n",
+        "Source: Brazilian Mortality Information System (SIM/DATASUS)"
+      )
+  ) +
+  theme_datasus(
+    base_size = 13
+  ) +
+  theme(
+    axis.text.x =
+      element_text(
+        angle = 45,
+        hjust = 1
+      ),
+    plot.margin =
+      margin(
+        t = 10,
+        r = 10,
+        b = 0,
+        l = 10
+      )
+  )
+
+contact_footer_percentage <-
+  cowplot::ggdraw() +
+  cowplot::draw_label(
+    "Analysis and interpretation: Felipe Barletta",
+    x = 0.01,
+    y = 0.50,
+    hjust = 0,
+    vjust = 0.5,
+    size = 9
+  ) +
+  cowplot::draw_image(
+    "icons/gmail.png",
+    x = 0.39,
+    y = 0.34,
+    width = 0.025,
+    height = 0.32
+  ) +
+  cowplot::draw_label(
+    "felipe.e.barletta@gmail.com",
+    x = 0.42,
+    y = 0.50,
+    hjust = 0,
+    vjust = 0.5,
+    size = 9
+  ) +
+  cowplot::draw_label(
+    "|",
+    x = 0.675,
+    y = 0.50,
+    hjust = 0.5,
+    vjust = 0.5,
+    size = 9
+  ) +
+  cowplot::draw_image(
+    "icons/whatsapp.png",
+    x = 0.70,
+    y = 0.34,
+    width = 0.025,
+    height = 0.32
+  ) +
+  cowplot::draw_label(
+    "+351 910 678 043",
+    x = 0.73,
+    y = 0.50,
+    hjust = 0,
+    vjust = 0.5,
+    size = 9
+  )
+
+plot_violent_annual_percentage <-
+  cowplot::plot_grid(
+    plot_main_percentage,
+    contact_footer_percentage,
+    ncol = 1,
+    rel_heights =
+      c(
+        1,
+        0.075
+      ),
+    align = "v",
+    axis = "lr"
+  )
+
+plot_violent_annual_percentage
+```
+
+# Interpretation
+
+<div class="conclusion-box">
+<strong>Main descriptive finding.</strong> Across 2010–2024, the selected SIM records contain <strong>`r scales::comma(total_violent)` intentional violent deaths</strong> among people whose occupation was recorded as a teaching occupation. Of these, <strong>`r scales::comma(total_suicide$deaths)` (`r sprintf("%.1f", total_suicide$percentage)`%)</strong> were classified as suicide and <strong>`r scales::comma(total_homicide$deaths)` (`r sprintf("%.1f", total_homicide$percentage)`%)</strong> as homicide.
+</div>
+
+The annual curves tell an additional story. Homicide represented the larger share of intentional violent deaths during most of the first part of the series. **From 2018 onward, suicide accounted for the larger annual share**, and the gap widened in the later years of the study period. In the final year, suicide represented approximately two-thirds of the suicide-plus-homicide deaths.
+
+These findings are descriptive and should not be interpreted as evidence that teaching causes suicide or homicide, nor as evidence that teachers have higher risks than other occupational groups. Establishing relative risk would require an appropriate population denominator and a comparison population.
+
+# Limitations
+
+Several limitations are important when interpreting the results:
+
+1. **No population denominator.** The analysis reports counts and proportions, not mortality rates.
+2. **Occupation measurement.** Occupation is the occupation recorded on the death certificate and may not represent current employment at death.
+3. **Public versus private employment.** The variables used here do not identify whether the teacher worked in the public or private sector.
+4. **Broad teacher definition.** The operational filter includes a wide range of teaching occupations, from basic to higher education and other teaching activities.
+5. **Changes in occupation recording.** Temporal patterns may be influenced by changes in completeness or coding of the occupation field.
+6. **Intent and legal classification.** ICD-10 identifies assault/homicide and intentional self-harm, but it does not by itself identify femicide.
+7. **Descriptive design.** The observed temporal trends do not establish causal mechanisms.
+
+# Reproducibility and exports
+
+```{r export-results}
+# Export the main analytical tables.
+write_csv(
+  teacher_occupations,
+  file.path(
+    output_directory,
+    "teacher_occupations.csv"
+  )
+)
+
+write_csv(
+  deaths_by_year,
+  file.path(
+    output_directory,
+    "teacher_deaths_by_year.csv"
+  )
+)
+
+write_csv(
+  deaths_by_icd10_3,
+  file.path(
+    output_directory,
+    "teacher_deaths_by_icd10_category.csv"
+  )
+)
+
+write_csv(
+  external_cause_summary,
+  file.path(
+    output_directory,
+    "teacher_deaths_external_causes.csv"
+  )
+)
+
+write_csv(
+  suicide_homicide_year,
+  file.path(
+    output_directory,
+    "teacher_suicide_homicide_by_year.csv"
+  )
+)
+
+# Save the main figures.
+ggsave(
+  file.path(
+    figure_directory,
+    "teacher_deaths_over_time.png"
+  ),
+  plot_deaths_over_time,
+  width = 10,
+  height = 6,
+  dpi = 300
+)
+
+ggsave(
+  file.path(
+    figure_directory,
+    "teacher_top_causes.png"
+  ),
+  plot_top_causes,
+  width = 10,
+  height = 7,
+  dpi = 300
+)
+
+ggsave(
+  file.path(
+    figure_directory,
+    "teacher_external_causes.png"
+  ),
+  plot_external_causes,
+  width = 10,
+  height = 6,
+  dpi = 300
+)
+
+ggsave(
+  file.path(
+    figure_directory,
+    "teacher_suicide_homicide_absolute.png"
+  ),
+  plot_violent_annual_absolute,
+  width = 12,
+  height = 7.2,
+  dpi = 300
+)
+
+ggsave(
+  file.path(
+    figure_directory,
+    "teacher_suicide_homicide_percentage.png"
+  ),
+  plot_violent_annual_percentage,
+  width = 12,
+  height = 7.2,
+  dpi = 300
+)
+
+# Record package and R versions for reproducibility.
+writeLines(
+  capture.output(
+    sessionInfo()
+  ),
+  file.path(
+    output_directory,
+    "session_info.txt"
+  )
+)
+```
+
+<div class="footer-note">
+<strong>Data source:</strong> Brazilian Mortality Information System (SIM/DATASUS), Brazilian Ministry of Health.<br>
+<strong>Analysis and interpretation:</strong> Felipe Barletta · felipe.e.barletta@gmail.com · WhatsApp +351 910 678 043
+</div>
